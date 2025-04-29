@@ -10,15 +10,22 @@ document.addEventListener('DOMContentLoaded', function() {
     loginScreen.style.display = 'block';
     startScreen.style.display = 'none';
     
-    // Add event listener for login form submission
+    // Add event listener for login form submission - SINGLE UNIFIED LOGIN CHECK
     loginForm.addEventListener('submit', function(event) {
-        console.log('Login form submitted'); // Debugging log
         event.preventDefault(); // Prevent default form submission
     
         const username = usernameInput.value.trim();
         const password = passwordInput.value.trim();
     
-        if (username === 'user' && password === 'user1') {
+        if (username === '') {
+            alert('Username cannot be empty.');
+            return;
+        }
+        
+        // Authentication logic with proper credential checking
+        if ((username === 'user' && password === 'user1') || 
+            (username === 'user1' && password === 'user1') ||
+            (username === 'admin' && password === 'admin123')) {
             //alert('Login successful!');
             localStorage.setItem('isLoggedIn', 'true'); // Set login status
             loginScreen.style.display = 'none';
@@ -28,45 +35,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
-    // Ensure login screen is visible on page load
-    loginScreen.style.display = 'block';
-    startScreen.style.display = 'none';
-    
-    // Add event listener for login form submission
-    loginForm.addEventListener('submit', function(event) {
-        event.preventDefault(); // Prevent default form submission
-    
-        const username = usernameInput.value.trim();
-    
-        if (username === 'user1') {
-            //alert('Login successful!');
-            loginScreen.style.display = 'none';
-            startScreen.style.display = 'block';
-        } else {
-            //alert('Invalid username. Please use "user1".');
-        }
-    });
-    
-    // Add event listener for login form submission
-    loginForm.addEventListener('submit', function(event) {
-        event.preventDefault(); // Prevent default form submission
-    
-        const username = usernameInput.value.trim();
-    
-        if (username === '') {
-            alert('Username cannot be empty.');
-            return;
-        }
-    
-        // Simulate authentication (replace with real authentication logic)
-        if (username === 'admin') {
-            //alert('Login successful!');
-            loginScreen.style.display = 'none';
-            startScreen.style.display = 'block';
-        } else {
-            //alert('Invalid username. Please try again.');
-        }
-    });
     // DOM elements - Quiz Screens
     const quizScreen = document.getElementById('quiz-screen');
     const resultsScreen = document.getElementById('results-screen');
