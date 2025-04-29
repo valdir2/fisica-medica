@@ -1,0 +1,61 @@
+const quizQuestions = {
+    "questions": [
+      {
+        "id": 1,
+        "question": "You have created a new project in Google Cloud through the gcloud command line interface (CLI) and linked a billing account. You need to create a new Compute Engine instance using the CLI. You need to perform the prerequisite steps. What should you do?",
+        "options": {
+          "A": "Create a Cloud Monitoring Workspace.",
+          "B": "Create a VPC network in the project.",
+          "C": "Enable the compute googleapis.com API.",
+          "D": "Grant yourself the IAM role of Computer Admin."
+        },
+        "answer": "C"
+      },
+      {
+        "id": 2,
+        "question": "You create a new Google Kubernetes Engine (GKE) cluster and want to make sure that it always runs a supported and stable version of Kubernetes. What should you do?",
+        "options": {
+          "A": "Enable the Node Auto-Repair feature for your GKE cluster.",
+          "B": "Enable the Node Auto-Upgrades feature for your GKE cluster.",
+          "C": "Select the latest available cluster version for your GKE cluster.",
+          "D": "Select \"Container-Optimized OS (cos)\" as a node image for your GKE cluster."
+        },
+        "answer": "B"
+      },
+      {
+        "id": 3,
+        "question": "You have experimented with Google Cloud using your own credit card and expensed the costs to your company. Your company wants to streamline the billing process and charge the costs of your projects to their monthly invoice. What should you do?",
+        "options": {
+          "A": "Grant the financial team the IAM role of Billing Account User€ on the billing account linked to your credit card.",
+          "B": "Set up BigQuery billing export and grant your financial department IAM access to query the data.",
+          "C": "Create a ticket with Google Billing Support to ask them to send the invoice to your company.",
+          "D": "Change the billing account of your projects to the billing account of your company."
+        },
+        "answer": "D"
+      },
+      {
+        "id": 4,
+        "question": "You have developed an application that consists of multiple microservices, with each microservice packaged in its own Docker container image. You want to deploy the entire application on Google Kubernetes Engine so that each microservice can be scaled individually. What should you do?",
+        "options": {
+          "A": "Create and deploy a Custom Resource Definition per microservice.",
+          "B": "Create and deploy a Docker Compose File.",
+          "C": "Create and deploy a Job per microservice.",
+          "D": "Create and deploy a Deployment per microservice."
+        },
+        "answer": "D"
+      },
+      {
+        "id": 5,
+        "question": "You have an object in a Cloud Storage bucket that you want to share with an external company. The object contains sensitive data. You want access to the content to be removed after four hours. The external company does not have a Google account to which you can grant specific user-based access privileges. You want to use the most secure method that requires the fewest steps. What should you do?",
+        "options": {
+          "A": "Create a signed URL with a four-hour expiration and share the URL with the company.",
+          "B": "Set object access to 'public' and use object lifecycle management to remove the object after four hours.",
+          "C": "Configure the storage bucket as a static website and furnish the object's URL to the compan",
+          "D": "Delete the object from the storage bucket after four hours.",
+          "E": "Create a new Cloud Storage bucket specifically for the external company to acces",
+          "F": "Copy the object to that bucke",
+          "G": "Delete the bucket after four hours have passed."
+        },
+        "answer": "A,D"
+       }
+  ]}	 
