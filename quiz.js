@@ -43,6 +43,27 @@ document.addEventListener('DOMContentLoaded', function() {
     const totalQuestionsStart = document.getElementById('total-questions-start');
     const startBtn = document.getElementById('start-btn');
     
+    // DOM elements - Quiz Options
+    const randomModeRadio = document.getElementById('randomMode');
+    const rangeModeRadio = document.getElementById('rangeMode');
+    const rangeOptions = document.getElementById('rangeOptions');
+    const startIdInput = document.getElementById('startId');
+    const endIdInput = document.getElementById('endId');
+    const randomizeRangeCheckbox = document.getElementById('randomizeRange');
+    
+    // Toggle range options visibility when radio buttons change
+    randomModeRadio.addEventListener('change', function() {
+        if (this.checked) {
+            rangeOptions.style.display = 'none';
+        }
+    });
+    
+    rangeModeRadio.addEventListener('change', function() {
+        if (this.checked) {
+            rangeOptions.style.display = 'block';
+        }
+    });
+    
     // DOM elements - Quiz screen
     const questionText = document.getElementById('question-text');
     const optionsContainer = document.getElementById('options-container');
@@ -100,13 +121,17 @@ document.addEventListener('DOMContentLoaded', function() {
             // Use the external quizQuestions object
             allQuestions = quizQuestions.questions;
 
-            // Set the initial questions array
+            // Set initial questions array (will be modified when starting quiz)
             questions = [...allQuestions];
 
             // Update the total questions count on start screen
-            totalQuestionsStart.textContent = questions.length;
+            totalQuestionsStart.textContent = allQuestions.length;
             totalQuestionsElement.textContent = questions.length;
             totalQuestionsResult.textContent = questions.length;
+            
+            // Set max value for endId input to match total questions
+            endIdInput.value = allQuestions.length;
+            endIdInput.max = allQuestions.length;
 
             // Return success
             return true;
@@ -117,11 +142,46 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
     
-    // Start the quiz
+    // Start the quiz with selected options
     function startQuiz() {
-        // Shuffle questions
-        questions = shuffleQuestions(questions);
-        localStorage.setItem('shuffledQuestions', JSON.stringify(questions)); // Save shuffled sequence
+        // Get selected questions based on options
+        if (randomModeRadio.checked) {
+            // Random mode: use all questions
+            questions = [...allQuestions];
+            questions = shuffleQuestions(questions);
+        } else if (rangeModeRadio.checked) {
+            // Range mode: filter questions by ID range
+            const startId = parseInt(startIdInput.value, 10) || 1;
+            const endId = parseInt(endIdInput.value, 10) || allQuestions.length;
+            
+            if (startId > endId) {
+                alert('Start ID must be less than or equal to End ID');
+                return;
+            }
+            
+            // Filter questions in selected range
+            questions = allQuestions.filter(q => {
+                const questionId = parseInt(q.id, 10);
+                return questionId >= startId && questionId <= endId;
+            });
+            
+            // Check if we have any questions in range
+            if (questions.length === 0) {
+                alert('No questions found in the selected range');
+                return;
+            }
+            
+            // Randomize if checkbox is checked
+            if (randomizeRangeCheckbox.checked) {
+                questions = shuffleQuestions(questions);
+            } else {
+                // Sort by ID if not randomizing
+                questions.sort((a, b) => parseInt(a.id, 10) - parseInt(b.id, 10));
+            }
+        }
+        
+        // Save shuffled questions to localStorage
+        localStorage.setItem('shuffledQuestions', JSON.stringify(questions));
         
         // Hide start screen, show quiz screen
         startScreen.style.display = 'none';
@@ -131,6 +191,9 @@ document.addEventListener('DOMContentLoaded', function() {
         currentQuestionIndex = 0;
         correctAnswers = 0;
         correctCounterElement.textContent = correctAnswers;
+        
+        // Update total questions count for quiz
+        totalQuestionsElement.textContent = questions.length;
         
         // Load the first question
         loadQuestion(currentQuestionIndex);
