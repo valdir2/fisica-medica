@@ -5,13 +5,10 @@ const quizQuestions = {
       "options": {
         "A": "Migrate the workload to a Compute Engine Preemptible VM.",
         "B": "Migrate the workload to a Google Kubernetes Engine cluster with Preemptible nodes.",
-        "C": "Migrate the workload to a Compute Engine V",
-        "D": "Start and stop the instance as needed.",
-        "E": "Create an Instance Template with Preemptible VMs O",
-        "F": "Create a Managed Instance Group from the template and adjust Target CPU Utilizatio",
-        "G": "Migrate the workload."
+        "C": "Migrate the workload to a Compute Engine VM. Start and stop the instance as needed.",
+        "D": "Create an Instance Template with Preemptible VMs On. Create a Managed Instance Group from the template and adjust Target CPU Utilization. Migrate the workload."
       },
-      "answer": "D",
+      "answer": "C",
       "id": 1
     },
     {
