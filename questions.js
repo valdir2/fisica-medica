@@ -11,7 +11,7 @@ const quizQuestions = {
         "F": "Create a Managed Instance Group from the template and adjust Target CPU Utilizatio",
         "G": "Migrate the workload."
       },
-      "answer": "B",
+      "answer": "D",
       "id": 1
     },
     {
