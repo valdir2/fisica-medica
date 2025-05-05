@@ -1791,7 +1791,7 @@ const quizQuestions = {
         "C": "gcloud deployment-manager deployments apply my-gcp-ace-cluster --type container.v1.cluster --config cluster.yaml",
         "D": "gcloud deployment-manager deployments apply my-gcp-ace-cluster --config cluster.yaml"
       },
-      "answer": A",
+      "answer": "A",
       "id": 149
     },
     {
