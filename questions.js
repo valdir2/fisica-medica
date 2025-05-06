@@ -14,17 +14,14 @@ const quizQuestions = {
     {
       "question": "You need to grant access for three users so that they can view and edit table data on a Cloud Spanner instance. What should you do?",
       "options": {
-        "A": "Run gcloud iam roles describe roles/spanner.databaseUse",
-        "B": "Add the users to the role.",
-        "C": "Run gcloud iam roles describe roles/spanner.databaseUse",
-        "D": "Add the users to a new grou",
-        "E": "Add the group to the role.",
-        "F": "Run gcloud iam roles describe roles/spanner.viewer --project my-projec",
-        "G": "Add the users to the role.",
-        "H": "Run gcloud iam roles describe roles/spanner.viewer --project my-projec",
-        "I": "Add the users to a new group.Add the group to the role."
+        "A": "Run gcloud iam roles describe roles/spanner.viewer --project my-project. Add the users to a new group.Add the group to the role.",
+        "B": "Run gcloud iam roles describe roles/spanner.databaseUser. Add the users to a new group. Add the group to the role.",
+        "C": "Run gcloud iam roles describe roles/spanner.viewer --project my-project. Add the users to the role.",
+        "D": "Run gcloud iam roles describe roles/spanner.databaseUser. Add the users to the role."
+
+       
       },
-      "answer": "A",
+      "answer": "D",
       "id": 2
     },
     {
@@ -52,16 +49,14 @@ const quizQuestions = {
     {
       "question": "You need to set up permissions for a set of Compute Engine instances to enable them to write data into a particular Cloud Storage bucket. You want to follow Google-recommended practices. What should you do?",
       "options": {
-        "A": "Create a service account with an access scop",
-        "B": "Use the access scope ‘https://www.googleapis.com/auth/devstorage.write_only’.",
-        "C": "Create a service account with an access scop",
-        "D": "Use the access scope ‘https://www.googleapis.com/auth/cloud-platform’.",
-        "E": "Create a service account and add it to the IAM role ‘storage.objectCreator’ for that bucket.",
-        "F": "Create a service account and add it to the IAM role ‘storage.objectAdmin’ for that bucket."
+        "A": "Create a service account with an access scope. Use the access scope 'https://www.googleapis.com/auth/devstorage.write_only'.",
+        "B": "Create a service account with an access scope. Use the access scope 'https://www.googleapis.com/auth/cloud-platform'.",
+        "C": "Create a service account and add it to the IAM role 'storage.objectCreator' for that bucket.",
+        "D": "Create a service account and add it to the IAM role 'storage.objectAdmin' for that bucket."
       },
-      "answer": "B",
+      "answer": "C",
       "id": 5
-    },
+    },    
     {
       "question": "Your company has an existing GCP organization with hundreds of projects and a billing account. Your company recently acquired another company that also has hundreds of projects and its own billing account. You would like to consolidate all GCP costs of both GCP organizations onto a single invoice. You would like to consolidate all costs as of tomorrow. What should you do?",
       "options": {
