@@ -1,4 +1,5 @@
 const quizQuestions = {
+  "title":"Google Cloud Certification Quiz",
   "questions": [
     {
       "question": "You need to produce a list of the enabled Google Cloud Platform APIs for a GCP project using the gcloud command line in the Cloud Shell. The project name is my-project. What should you do?",

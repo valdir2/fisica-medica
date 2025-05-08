@@ -318,6 +318,12 @@ document.addEventListener('DOMContentLoaded', function() {
             // Set max value for endId input to match total questions
             endIdInput.value = allQuestions.length;
             endIdInput.max = allQuestions.length;
+            
+            // Set dynamic title if available
+            if (quizQuestions.title) {
+                document.querySelector('#start-screen h1').textContent = quizQuestions.title;
+                document.title = quizQuestions.title;
+            }
 
             // Return success
             return true;
