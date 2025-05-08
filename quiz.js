@@ -50,6 +50,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const startIdInput = document.getElementById('startId');
     const endIdInput = document.getElementById('endId');
     const randomizeRangeCheckbox = document.getElementById('randomizeRange');
+    const randomizeOptionsCheckbox = document.getElementById('randomizeOptions'); // Nuovo elemento UI
     
     // Toggle range options visibility when radio buttons change
     randomModeRadio.addEventListener('change', function() {
@@ -102,11 +103,97 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Notes toggle event listener
     toggleNotesBtn.addEventListener('click', function() {
+        // Recupera l'elemento warning in modo sicuro
+        const randomizeWarning = document.getElementById('randomize-warning');
+        
         if (notesContainer.style.display === 'none' || notesContainer.style.display === '') {
+            const currentQuestion = questions[currentQuestionIndex];
+            
+            // Get user answers
+            const userAnswers = answeredQuestions[currentQuestion.id] ? 
+                answeredQuestions[currentQuestion.id].split(',') : [];
+                
+            // Check if we're using randomized options
+            if (randomizeOptionsCheckbox.checked) {
+                // Find the original question in allQuestions to get original options
+                const originalQuestion = allQuestions.find(q => q.id === currentQuestion.id);
+                
+                // Create HTML for showing the original options with user's selection highlighted
+                let originalOptionsHtml = '<div class="original-options mb-3">';
+                originalOptionsHtml += '<h6 class="mb-2">Opzioni nell\'ordine originale:</h6>';
+                
+                // Map current answer keys back to original keys if we have a mapping
+                // This requires tracking the original to new key mapping during shuffle
+                let userOriginalAnswers = [];
+                
+                // Keep track of which current option maps to which original option
+                const optionMap = {};
+                for (const [newKey, value] of Object.entries(currentQuestion.options)) {
+                    // Find the original key by matching the option text
+                    for (const [origKey, origValue] of Object.entries(originalQuestion.options)) {
+                        if (value === origValue) {
+                            optionMap[newKey] = origKey;
+                            break;
+                        }
+                    }
+                }
+                
+                // Map user selected answers back to original keys
+                userOriginalAnswers = userAnswers.map(key => optionMap[key] || key);
+                
+                // Show original options with user selection highlighted
+                for (const [key, value] of Object.entries(originalQuestion.options)) {
+                    const isSelected = userOriginalAnswers.includes(key);
+                    const isCorrect = originalQuestion.answer.split(',').includes(key);
+                    
+                    let optionClass = '';
+                    if (isSelected) {
+                        optionClass = isCorrect ? 'text-success fw-bold' : 'text-danger fw-bold';
+                    } else if (isCorrect) {
+                        optionClass = 'text-success';
+                    }
+                    
+                    originalOptionsHtml += `<div class="${optionClass}">`;
+                    originalOptionsHtml += `<span class="fw-medium">${key}:</span> ${value}`;
+                    if (isSelected) {
+                        originalOptionsHtml += ' <span class="badge bg-primary">La tua risposta</span>';
+                    }
+                    if (isCorrect) {
+                        originalOptionsHtml += ' <span class="badge bg-success">Corretta</span>';
+                    }
+                    originalOptionsHtml += '</div>';
+                }
+                
+                originalOptionsHtml += '</div><hr class="my-3">';
+                
+                // Set notes content with original options above
+                notesContainer.innerHTML = originalOptionsHtml + '<div class="notes-text">' + currentQuestion.notes + '</div>';
+                
+                // Nascondi l'avviso solo se esiste l'elemento
+                if (randomizeWarning) {
+                    randomizeWarning.style.display = 'none';
+                }
+            } else {
+                // If options aren't randomized, just show the notes
+                notesContainer.textContent = currentQuestion.notes;
+                
+                // Nascondi l'avviso solo se esiste l'elemento
+                if (randomizeWarning) {
+                    randomizeWarning.style.display = 'none';
+                }
+            }
+            
+            // Show the notes container and update button text
             notesContainer.style.display = 'block';
             this.textContent = 'Hide Notes';
         } else {
             notesContainer.style.display = 'none';
+            
+            // Nascondi l'avviso solo se esiste l'elemento
+            if (randomizeWarning) {
+                randomizeWarning.style.display = 'none';
+            }
+            
             this.textContent = 'Show Notes';
         }
     });
@@ -128,6 +215,90 @@ document.addEventListener('DOMContentLoaded', function() {
             [array[i], array[j]] = [array[j], array[i]];
         }
         return array;
+    }
+    
+    // Function to shuffle options and update the answer key
+    function shuffleOptions(question) {
+        // Create a copy of the question to avoid modifying the original
+        const questionCopy = JSON.parse(JSON.stringify(question));
+        const originalOptions = questionCopy.options;
+        const originalAnswer = questionCopy.answer;
+        const originalNotes = questionCopy.notes;
+        
+        // Create arrays for keys and values
+        const keys = Object.keys(originalOptions);
+        const entries = keys.map(key => ({ key, value: originalOptions[key] }));
+        
+        // Create a map to track which new key corresponds to which old key
+        const keyMap = {};
+        const reverseKeyMap = {}; // Maps old keys to new keys
+        
+        // Shuffle the entries
+        for (let i = entries.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [entries[i], entries[j]] = [entries[j], entries[i]];
+        }
+        
+        // Create new options object with the standard keys but shuffled values
+        const newOptions = {};
+        const standardKeys = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'].slice(0, entries.length);
+        
+        entries.forEach((entry, index) => {
+            const newKey = standardKeys[index];
+            newOptions[newKey] = entry.value;
+            keyMap[entry.key] = newKey;
+            reverseKeyMap[newKey] = entry.key;
+        });
+        
+        // Update the correct answer key(s)
+        let newAnswer = '';
+        if (originalAnswer.includes(',')) {
+            // For multiple correct answers
+            newAnswer = originalAnswer.split(',')
+                .map(key => keyMap[key])
+                .join(',');
+        } else {
+            // For single correct answer
+            newAnswer = keyMap[originalAnswer];
+        }
+        
+        // Update notes to replace references to original option letters
+        let newNotes = originalNotes;
+        if (newNotes) {
+            // Replace specific references to options in the notes
+            keys.forEach(oldKey => {
+                const newKey = keyMap[oldKey];
+                // Replace references like "option A" or "A:" or "**A:**"
+                const patterns = [
+                    new RegExp(`\\b${oldKey}\\b`, 'g'), // Standalone letter
+                    new RegExp(`\\b${oldKey}:`, 'g'),   // Letter followed by colon
+                    new RegExp(`\\*\\*${oldKey}:\\*\\*`, 'g'), // Letter in markdown format
+                    new RegExp(`\\bopzione ${oldKey}\\b`, 'gi'), // "opzione A" in Italian
+                    new RegExp(`\\brisposta ${oldKey}\\b`, 'gi'), // "risposta A" in Italian
+                    new RegExp(`risposta ${oldKey} è corretta`, 'gi') // "risposta A è corretta"
+                ];
+                
+                patterns.forEach(pattern => {
+                    newNotes = newNotes.replace(pattern, (match) => {
+                        if (match.includes('**')) return `**${newKey}:**`;
+                        if (match.includes(':')) return `${newKey}:`;
+                        if (match.toLowerCase().includes('opzione')) 
+                            return match.replace(oldKey, newKey);
+                        if (match.toLowerCase().includes('risposta') && match.toLowerCase().includes('corretta'))
+                            return match.replace(oldKey, newKey);
+                        if (match.toLowerCase().includes('risposta'))
+                            return match.replace(oldKey, newKey);
+                        return newKey;
+                    });
+                });
+            });
+        }
+        
+        questionCopy.options = newOptions;
+        questionCopy.answer = newAnswer;
+        questionCopy.notes = newNotes;
+        
+        return questionCopy;
     }
     
     // Load questions from external file
@@ -245,17 +416,25 @@ document.addEventListener('DOMContentLoaded', function() {
         // Reset selected answers
         selectedAnswers.clear();
         
+        // Shuffle the options for this question if enabled and not already answered
+        let displayQuestion = question;
+        if (!answeredQuestions[question.id] && randomizeOptionsCheckbox.checked) {
+            displayQuestion = shuffleOptions(question);
+            // Store the shuffled question back in the questions array to maintain consistency
+            questions[index] = displayQuestion;
+        }
+        
         // Create option elements
-        for (const [key, value] of Object.entries(question.options)) {
+        for (const [key, value] of Object.entries(displayQuestion.options)) {
             const optionElement = document.createElement('div');
             optionElement.className = 'option';
             optionElement.dataset.option = key;
             optionElement.textContent = key + ': ' + value;
             
             // If this question was already answered
-            if (answeredQuestions[question.id]) {
-                const correctAnswers = question.answer.split(',');
-                const userAnswers = answeredQuestions[question.id].split(',');
+            if (answeredQuestions[displayQuestion.id]) {
+                const correctAnswers = displayQuestion.answer.split(',');
+                const userAnswers = answeredQuestions[displayQuestion.id].split(',');
                 
                 if (userAnswers.includes(key)) {
                     optionElement.classList.add('selected');
@@ -265,14 +444,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
                 
                 // Show notes toggle button if question has notes
-                if (question.notes) {
+                if (displayQuestion.notes) {
                     toggleNotesBtn.style.display = 'block';
                 }
             }
             
             // Add click handler
             optionElement.addEventListener('click', function() {
-                selectOption(this, key, question);
+                selectOption(this, key, displayQuestion);
             });
             
             optionsContainer.appendChild(optionElement);
@@ -280,7 +459,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Update navigation buttons and handle button state
         prevBtn.disabled = index === 0;
-        if (answeredQuestions[question.id]) {
+        if (answeredQuestions[displayQuestion.id]) {
             nextBtn.textContent = 'Next';
             nextBtn.disabled = index === questions.length - 1;
         } else {
