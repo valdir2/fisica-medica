@@ -68,6 +68,15 @@
             background-color: #f8d7da;
             color: #842029;
         }
+        .notes-container {
+            display: none;
+            padding: 15px;
+            border-radius: 6px;
+            margin-top: 15px;
+            background-color: #fff3cd;
+            color: #664d03;
+            border-left: 4px solid #ffc107;
+        }
         #incorrect-questions-list {
             display: none;
             background: white;
@@ -81,6 +90,10 @@
             border-radius: 8px;
             margin-bottom: 20px;
             box-shadow: 0 1px 5px rgba(0,0,0,0.05);
+        }
+        .toggle-notes {
+            margin-top: 10px;
+            font-size: 0.9rem;
         }
     </style>
 </head>
@@ -168,6 +181,8 @@
                                 <h4 id="question-text" class="mb-4"></h4>
                                 <div id="options-container" class="mb-3"></div>
                                 <div id="feedback" class="feedback"></div>
+                                <button id="toggle-notes" class="btn btn-sm btn-outline-warning toggle-notes" style="display: none;">Show Notes</button>
+                                <div id="notes-container" class="notes-container"></div>
                             </div>
                             
                             <div class="d-flex justify-content-between">

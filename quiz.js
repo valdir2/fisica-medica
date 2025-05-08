@@ -75,6 +75,10 @@ document.addEventListener('DOMContentLoaded', function() {
     const totalQuestionsElement = document.getElementById('total-questions');
     const correctCounterElement = document.getElementById('correct-counter');
     
+    // DOM elements for Notes feature
+    const toggleNotesBtn = document.getElementById('toggle-notes');
+    const notesContainer = document.getElementById('notes-container');
+    
     // DOM elements - Results screen
     const finalScoreElement = document.getElementById('final-score');
     const totalQuestionsResult = document.getElementById('total-questions-result');
@@ -95,6 +99,17 @@ document.addEventListener('DOMContentLoaded', function() {
     let incorrectQuestions = [];
     let isRetryMode = false;
     let selectedAnswers = new Set(); // Track currently selected answers
+    
+    // Notes toggle event listener
+    toggleNotesBtn.addEventListener('click', function() {
+        if (notesContainer.style.display === 'none' || notesContainer.style.display === '') {
+            notesContainer.style.display = 'block';
+            this.textContent = 'Hide Notes';
+        } else {
+            notesContainer.style.display = 'none';
+            this.textContent = 'Show Notes';
+        }
+    });
     
     // Helper functions for array comparison
     function arraysEqual(arr1, arr2) {
@@ -150,20 +165,17 @@ document.addEventListener('DOMContentLoaded', function() {
             questions = [...allQuestions];
             questions = shuffleQuestions(questions);
         } else if (rangeModeRadio.checked) {
-            // Range mode: filter questions by ID range
-            const startId = parseInt(startIdInput.value, 10) || 1;
-            const endId = parseInt(endIdInput.value, 10) || allQuestions.length;
+            // Range mode: filter questions by position range, not by ID
+            const startPos = parseInt(startIdInput.value, 10) || 1;
+            const endPos = parseInt(endIdInput.value, 10) || allQuestions.length;
             
-            if (startId > endId) {
-                alert('Start ID must be less than or equal to End ID');
+            if (startPos > endPos) {
+                alert('Start position must be less than or equal to End position');
                 return;
             }
             
-            // Filter questions in selected range
-            questions = allQuestions.filter(q => {
-                const questionId = parseInt(q.id, 10);
-                return questionId >= startId && questionId <= endId;
-            });
+            // Filter questions by array index position (1-based for user, 0-based for array)
+            questions = allQuestions.slice(startPos - 1, startPos - 1 + (endPos - startPos + 1));
             
             // Check if we have any questions in range
             if (questions.length === 0) {
@@ -174,9 +186,6 @@ document.addEventListener('DOMContentLoaded', function() {
             // Randomize if checkbox is checked
             if (randomizeRangeCheckbox.checked) {
                 questions = shuffleQuestions(questions);
-            } else {
-                // Sort by ID if not randomizing
-                questions.sort((a, b) => parseInt(a.id, 10) - parseInt(b.id, 10));
             }
         }
         
@@ -192,8 +201,9 @@ document.addEventListener('DOMContentLoaded', function() {
         correctAnswers = 0;
         correctCounterElement.textContent = correctAnswers;
         
-        // Update total questions count for quiz
+        // Update total questions count for quiz and results screen
         totalQuestionsElement.textContent = questions.length;
+        totalQuestionsResult.textContent = questions.length;
         
         // Load the first question
         loadQuestion(currentQuestionIndex);
@@ -213,6 +223,9 @@ document.addEventListener('DOMContentLoaded', function() {
         localStorage.setItem('currentQuestionIndex', index); // Save progress
         currentQuestionElement.textContent = index + 1;
         
+        // Ensure total questions element is updated with the current filtered questions length
+        totalQuestionsElement.textContent = questions.length;
+        
         // Display question text
         questionText.textContent = question.question;
         
@@ -221,6 +234,10 @@ document.addEventListener('DOMContentLoaded', function() {
         feedbackElement.className = 'feedback';
         feedbackElement.textContent = '';
         feedbackElement.style.display = 'none';
+        
+        // Hide notes section and toggle button
+        notesContainer.style.display = 'none';
+        toggleNotesBtn.style.display = 'none';
         
         // Update Next button text and behavior for new question
         nextBtn.textContent = 'Submit Answer';
@@ -245,6 +262,11 @@ document.addEventListener('DOMContentLoaded', function() {
                     optionElement.classList.add(correctAnswers.includes(key) ? 'correct' : 'incorrect');
                 } else if (correctAnswers.includes(key)) {
                     optionElement.classList.add('correct');
+                }
+                
+                // Show notes toggle button if question has notes
+                if (question.notes) {
+                    toggleNotesBtn.style.display = 'block';
                 }
             }
             
@@ -490,6 +512,12 @@ document.addEventListener('DOMContentLoaded', function() {
             // If this is the last question, disable the Next button
             if (currentQuestionIndex === questions.length - 1) {
                 nextBtn.disabled = true;
+            }
+            
+            // Show notes button if notes are available
+            if (currentQuestion.notes) {
+                toggleNotesBtn.style.display = 'block';
+                notesContainer.textContent = currentQuestion.notes;
             }
         }
         // If button shows "Next", move to next question
