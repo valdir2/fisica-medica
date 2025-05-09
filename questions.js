@@ -494,11 +494,12 @@ const quizQuestions = {
       "notes": "La risposta corretta è C perché *Storage Object Admin* è il ruolo granulare di IAM raccomandato da Google per permettere a un utente di gestire completamente gli oggetti (file) all'interno di un bucket di Cloud Storage. Permette di creare, eliminare, leggere e modificare gli oggetti.  Le altre opzioni sono errate perché:  *   *Project Editor*: è un ruolo troppo ampio, concede accesso a *tutto* il progetto GCP, non solo a Cloud Storage, violando il principio del minimo privilegio. *   *Storage Admin*: Permette di gestire i *bucket* stessi (creazione, eliminazione, gestione delle policy), cosa che non rientra nei requisiti del problema, e comunque non è la scelta migliore se si vuole limitare l'accesso ai soli oggetti. *   *Storage Object Creator*: Permette solo di creare oggetti, ma non di gestirli (ad esempio, modificarli o eliminarli), limitando troppo le capacità richieste."
     },
     {
-      "question": "Your company is moving its continuous integration and delivery (CI/CD) pipeline to Compute Engine instances. The pipeline will manage the entire cloud infrastructure through code. How can you ensure that the pipeline has appropriate permissions while your system is following security best practices? ​ A.. • Attach a single service account to the compute instances. ​ • Add minimal rights to the service account. ​ • Allow the service account to impersonate a Cloud Identity user with elevated permissions to create, update, or delete resources.​",
+      "question": "Your company is moving its continuous integration and delivery (CI/CD) pipeline to Compute Engine instances. The pipeline will manage the entire cloud infrastructure through code. How can you ensure that the pipeline has appropriate permissions while your system is following security best practices? ​​",
       "options": {
-        "B": "• Add a step for human approval to the CI/CD pipeline before the execution of the infrastructure provisioning.​",
-        "C": "• Attach a single service account to the compute instances. ​",
-        "D": "• Create multiple service accounts, one for each pipeline with the appropriate minimal Identity and Access Management (IAM) permissions.              ​"
+        "A": "• Attach a single service account to the compute instances. • Add minimal rights to the service account.• Allow the service account to impersonate a Cloud Identity user with elevated permissions to create, update, or delete resources.​",
+        "B": "• Add a step for human approval to the CI/CD pipeline before the execution of the infrastructure provisioning.​• Use the human approvals IAM account for the provisioning.​​",
+        "C": "​• Attach a single service account to the compute instances.• Add all required Identity and Access Management (IAM) permissions to this service account to create, update, or delete resources.",
+        "D": "• Create multiple service accounts, one for each pipeline with the appropriate minimal Identity and Access Management (IAM) permissions.• Use a secret manager service to store the key files of the service accounts.• Allow the CI/CD pipeline to request the appropriate secrets during the execution of the pipeline."
       },
       "id": 247,
       "answer": "D",
