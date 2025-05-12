@@ -1025,10 +1025,10 @@ const quizQuestions = {
     {
       "question": "You installed the Google Cloud CLI on your workstation and set the proxy configuration. However, you are worried that your proxy credentials will be recorded in the gcloud CLI logs. You want to prevent your proxy credential from being logged. What should you do?​​",
       "options": {
-        "A": "Configure username and password by using gcloud config set proxy/username and gcloud config set proxy/password commands.​",
-        "B": "Encode username and password in sha256 encoding, and save in to a text file. Use filename as a value in the gcloud config set core/custom_ca_certs_file command.​",
-        "C": "Provide values for CLOUDSDK_PROXY_USERNAME and CLOUDSDK_PROXY_PASSWORD in the gcloud CLI tool configuration file.​",
-        "D": "Set the CLOUDSDK_PROXY_USERNAME and CLOUDSDK_PROXY_PASSWORD properties by using environment variables in your command line tool.​"
+        "A": "• Ensure that the Ops Agent is installed on the Compute Engine instance.​• Create a custom metric in the Cloud Monitoring dashboard.​• Provide the security team member with access to this dashboard.​​",
+        "B": "• Ensure that the Ops Agent is installed on the Compute Engine instance.​• Provide the security team member roles/osconfig.inventoryViewer permission.​​",
+        "C": "• Ensure that the OS Config agent is installed on the Compute Engine instance.​• Provide the security team member roles/osconfig.vulnerabilityReportViewer permission.​​",
+        "D": "• Ensure that the OS Config agent is installed on the Compute Engine instance.​• Create a log sink to BigQuery dataset.​• Provide the security team member with access to this dataset.​​"
       },
       "id": 251,
       "answer": "D",
