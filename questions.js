@@ -845,7 +845,7 @@ const quizQuestions = {
     {
       "question": "You have an application that looks for its licensing server on the IP 10.0.3.21. You need to deploy the licensing server on Compute Engine. You do not want to change the configuration of the application and want the application to be able to reach the licensing server. What should you do?",
       "options": {
-        "A": "Reserve the IP 10.0.3.21 as a static internal IP address using gcloud and assign it to the licensing server. Most Voted",
+        "A": "Reserve the IP 10.0.3.21 as a static internal IP address using gcloud and assign it to the licensing server.",
         "B": "Reserve the IP 10.0.3.21 as a static public IP address using gcloud and assign it to the licensing server.",
         "C": "Use the IP 10.0.3.21 as a custom ephemeral IP address and assign it to the licensing server.",
         "D": "Start the licensing server with an automatic ephemeral IP address, and then promote it to a static internal IP address."
