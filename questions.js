@@ -1151,7 +1151,7 @@ const quizQuestions = {
         "D": "Build a Cloud function that triggers a timer of 45 days to delete objects that have expired."
       },
       "id": 159,
-      "answer": "A",
+      "answer": "A,B",
       "notes": "La risposta A è corretta perché lo strumento di gestione del ciclo di vita degli oggetti di Cloud Storage automatizza la cancellazione dei dati dopo un periodo specificato (45 giorni in questo caso). Questo riduce al minimo la manutenzione e garantisce la conformità ai requisiti di scadenza dei dati senza dover scrivere codice personalizzato.  Le altre opzioni sono errate per i seguenti motivi:  *   **B:** Mentre gli URL firmati gestiscono l'accesso temporaneo, non automatizzano l'eliminazione dei dati. Richiederebbe comunque codice aggiuntivo per implementare la cancellazione dopo 45 giorni, aumentando la manutenzione. *   **C:** L'impostazione di un server SFTP e la gestione di un utente per ogni fornitore introducono complessità, Overhead di manutenzione e non gestiscono automaticamente l'eliminazione dei dati. *   **D:** La creazione di una Cloud Function per la cancellazione basata su timer introduce una maggiore complessità di codice, Overhead di gestione e necessità di monitoraggio e manutenzione. È più efficiente utilizzare lo strumento di gestione del ciclo di vita integrato di Cloud Storage."
     },
     {
