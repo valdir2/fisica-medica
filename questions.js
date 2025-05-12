@@ -1010,13 +1010,13 @@ const quizQuestions = {
       "answer": "A",
       "notes": "La risposta corretta è A perché un HTTP(S) Load Balancer è la soluzione raccomandata per servire applicazioni web pubbliche su HTTPS e per terminare la sessione SSL del client al load balancer. Questo consente al load balancer di ispezionare il traffico HTTP e HTTPS, ottimizzare la consegna dei contenuti e applicare politiche di sicurezza. La chiave è la terminazione SSL e la gestione del traffico HTTP(S), che solo l'HTTP(S) Load Balancer offre in modo nativo.  Le altre opzioni sono errate perché:  *   **B: Configure an internal TCP load balancer.** Un load balancer TCP interno non gestisce il traffico HTTPS né termina le connessioni SSL. È progettato per il bilanciamento del carico interno del traffico TCP. *   **C: Configure an external SSL proxy load balancer.** Un load balancer SSL proxy termina le connessioni SSL ma non ha le funzionalità di ispezione HTTP(S) offerte da un HTTP(S) Load Balancer. È generalmente meno efficiente per il traffico web standard. *   **D: Configure an external TCP proxy load balancer.** Un load balancer TCP proxy non gestisce il traffico HTTPS né termina le connessioni SSL. È progettato per il bilanciamento del carico del traffico TCP."
     },
-    {
+     {
       "question": "Your company's security vulnerability management policy wants a member of the security team to have visibility into vulnerabilities and other OS metadata for a specific Compute Engine instance. This Compute Engine instance hosts a critical application in your Google Cloud project. You need to implement your company's security vulnerability management policy. What should you do?​",
       "options": {
-        "A": "• Ensure that the Ops Agent is installed on the Compute Engine instance.​",
-        "B": "• Ensure that the Ops Agent is installed on the Compute Engine instance.​",
-        "C": "• Ensure that the OS Config agent is installed on the Compute Engine instance.​",
-        "D": "• Ensure that the OS Config agent is installed on the Compute Engine instance.​"
+        "A": "• Ensure that the Ops Agent is installed on the Compute Engine instance.​• Create a custom metric in the Cloud Monitoring dashboard.​• Provide the security team member with access to this dashboard.​​",
+        "B": "• Ensure that the Ops Agent is installed on the Compute Engine instance.​• Provide the security team member roles/osconfig.inventoryViewer permission.​​",
+        "C": "• Ensure that the OS Config agent is installed on the Compute Engine instance.​• Provide the security team member roles/osconfig.vulnerabilityReportViewer permission.​​",
+        "D": "• Ensure that the OS Config agent is installed on the Compute Engine instance.​• Create a log sink to BigQuery dataset.​• Provide the security team member with access to this dataset.​"
       },
       "id": 254,
       "answer": "C",
@@ -1025,10 +1025,10 @@ const quizQuestions = {
     {
       "question": "You installed the Google Cloud CLI on your workstation and set the proxy configuration. However, you are worried that your proxy credentials will be recorded in the gcloud CLI logs. You want to prevent your proxy credential from being logged. What should you do?​​",
       "options": {
-        "A": "• Ensure that the Ops Agent is installed on the Compute Engine instance.​• Create a custom metric in the Cloud Monitoring dashboard.​• Provide the security team member with access to this dashboard.​​",
-        "B": "• Ensure that the Ops Agent is installed on the Compute Engine instance.​• Provide the security team member roles/osconfig.inventoryViewer permission.​​",
-        "C": "• Ensure that the OS Config agent is installed on the Compute Engine instance.​• Provide the security team member roles/osconfig.vulnerabilityReportViewer permission.​​",
-        "D": "• Ensure that the OS Config agent is installed on the Compute Engine instance.​• Create a log sink to BigQuery dataset.​• Provide the security team member with access to this dataset.​​"
+        "A": "​​Configure username and password by using gcloud config set proxy/username and gcloud config set proxy/password commands.​",
+        "B": "Encode username and password in sha256 encoding, and save in to a text file. Use filename as a value in the gcloud config set core/custom_ca_certs_file command.​​​",
+        "C": "Provide values for CLOUDSDK_PROXY_USERNAME and CLOUDSDK_PROXY_PASSWORD in the gcloud CLI tool configuration file.​​",
+        "D": "Set the CLOUDSDK_PROXY_USERNAME and CLOUDSDK_PROXY_PASSWORD properties by using environment variables in your command line tool.​​​"
       },
       "id": 251,
       "answer": "D",
