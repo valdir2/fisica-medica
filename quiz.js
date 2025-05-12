@@ -261,38 +261,8 @@ document.addEventListener('DOMContentLoaded', function() {
             // For single correct answer
             newAnswer = keyMap[originalAnswer];
         }
-        
-        // Update notes to replace references to original option letters
+          // Manteniamo le note originali senza modificare i riferimenti alle lettere delle opzioni
         let newNotes = originalNotes;
-        if (newNotes) {
-            // Replace specific references to options in the notes
-            keys.forEach(oldKey => {
-                const newKey = keyMap[oldKey];
-                // Replace references like "option A" or "A:" or "**A:**"
-                const patterns = [
-                    new RegExp(`\\b${oldKey}\\b`, 'g'), // Standalone letter
-                    new RegExp(`\\b${oldKey}:`, 'g'),   // Letter followed by colon
-                    new RegExp(`\\*\\*${oldKey}:\\*\\*`, 'g'), // Letter in markdown format
-                    new RegExp(`\\bopzione ${oldKey}\\b`, 'gi'), // "opzione A" in Italian
-                    new RegExp(`\\brisposta ${oldKey}\\b`, 'gi'), // "risposta A" in Italian
-                    new RegExp(`risposta ${oldKey} è corretta`, 'gi') // "risposta A è corretta"
-                ];
-                
-                patterns.forEach(pattern => {
-                    newNotes = newNotes.replace(pattern, (match) => {
-                        if (match.includes('**')) return `**${newKey}:**`;
-                        if (match.includes(':')) return `${newKey}:`;
-                        if (match.toLowerCase().includes('opzione')) 
-                            return match.replace(oldKey, newKey);
-                        if (match.toLowerCase().includes('risposta') && match.toLowerCase().includes('corretta'))
-                            return match.replace(oldKey, newKey);
-                        if (match.toLowerCase().includes('risposta'))
-                            return match.replace(oldKey, newKey);
-                        return newKey;
-                    });
-                });
-            });
-        }
         
         questionCopy.options = newOptions;
         questionCopy.answer = newAnswer;
