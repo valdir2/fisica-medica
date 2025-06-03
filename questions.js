@@ -526,8 +526,8 @@ const quizQuestions = {
         "D": "Migrate the workload to a Compute Engine Spot VM.​"
       },
       "id": 218,
-      "answer": "D",
-      "notes": "La risposta D è corretta perché le Spot VM offrono un notevole sconto sul prezzo delle VM standard, rendendole l'opzione più conveniente per un'attività batch che può essere interrotta e ripresa. Il processo è offline, quindi l'interruzione non impatta negativamente gli utenti.  Le altre opzioni sono errate per i seguenti motivi:  *   **A:** Un Managed Instance Group è pensato per applicazioni che devono essere sempre disponibili e scalabili, il che non è necessario per un processo batch mensile. L'utilizzo di un Instance Template con un Managed Instance Group, anche con Spot VMs, introdurrebbe una complessità e un costo inutili. *   **B:** Mentre una VM Compute Engine standard funziona, non sfrutta i risparmi offerti dalle Spot VM, rendendola più costosa della risposta corretta. *   **C:** Google Kubernetes Engine (GKE) è eccessivo per un singolo processo batch. Aggiunge una complessità significativa nella gestione e nell'implementazione, con conseguenti costi maggiori senza alcun vantaggio reale per questa attività specifica."
+      "answer": "B",
+      "notes": "Risposta corretta: B.Usa una Compute Engine VM standard, avviala solo quando serve (una volta al mese), ed eviti rischi di interruzione."
     },
     {
       "question": "You need to assign a Cloud Identity and Access Management (Cloud IAM) role to an external auditor. The auditor needs to have permissions to review your Google Cloud Platform (GCP) Audit Logs and also to review your Data Access logs. What should you do?",
