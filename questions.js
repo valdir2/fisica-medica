@@ -1,5 +1,5 @@
 const quizQuestions = {
-  "title": "Fisica Medica FINALE 2 - Quiz Completo",
+  "title": "Fisica Medica FINALE 2 - Quiz Completo - Versione Difficile",
   "questions": [
     {
       "question": "Le radiazioni ionizzanti si distinguono da quelle non ionizzanti perché:",
@@ -17,9 +17,9 @@ const quizQuestions = {
       "question": "Nelle radiazioni ionizzanti dirette, la deposizione di energia avviene attraverso:",
       "options": {
         "A": "Interazioni coulombiane tra particelle cariche e orbitali atomici",
-        "B": "Un processo in due step con particelle neutre",
-        "C": "Emissione di fotoni secondari",
-        "D": "Collisioni elastiche"
+        "B": "Un processo in due step con particelle neutre attraverso interazioni coulombiane dirette",
+        "C": "Emissione di fotoni secondari mediante processi di trasferimento energetico",
+        "D": "Collisioni elastiche tramite eccitazione degli stati quantici"
       },
       "id": 2,
       "answer": "A",
@@ -52,10 +52,10 @@ const quizQuestions = {
     {
       "question": "L'esposizione X è definita come:",
       "options": {
-        "A": "L'energia assorbita per unità di massa",
+        "A": "L'energia assorbita per unità di massa di tessuto",
         "B": "La capacità dei fotoni di ionizzare l'aria",
-        "C": "L'energia trasferita alle particelle cariche",
-        "D": "Il numero di decadimenti per unità di tempo"
+        "C": "L'energia trasferita alle particelle cariche per unità di massa",
+        "D": "Il numero di ioni prodotti per unità di volume"
       },
       "id": 5,
       "answer": "B",
@@ -64,10 +64,10 @@ const quizQuestions = {
     {
       "question": "Il KERMA (K) rappresenta:",
       "options": {
-        "A": "L'energia assorbita nel mezzo",
+        "A": "L'potenza trasferita alle particelle neutre per unità di volume",
         "B": "L'energia trasferita alle particelle cariche per unità di massa",
-        "C": "La dose equivalente pesata",
-        "D": "L'attività radioattiva"
+        "C": "L'forza trasferita alle fotoni per unità di densità",
+        "D": "L'momento trasferita alle neutroni per unità di peso"
       },
       "id": 6,
       "answer": "B",
@@ -88,10 +88,10 @@ const quizQuestions = {
     {
       "question": "L'attività A di una sostanza radioattiva è definita come:",
       "options": {
-        "A": "La massa del materiale radioattivo",
+        "A": "Il numero di decadimenti per unità di frequenza",
         "B": "Il numero di decadimenti per unità di tempo",
-        "C": "L'energia rilasciata per decadimento",
-        "D": "La probabilità di decadimento"
+        "C": "Il numero di decadimenti per unità di periodo",
+        "D": "Il numero di decadimenti per unità di fase"
       },
       "id": 8,
       "answer": "B",
@@ -112,10 +112,10 @@ const quizQuestions = {
     {
       "question": "La legge del decadimento radioattivo afferma che Np(t) =:",
       "options": {
-        "A": "Np(0) × λt",
-        "B": "Np(0) × e^λt",
+        "A": "Np(0) × e^(λt)",
+        "B": "Np(0) × e^(-2λt)",
         "C": "Np(0) × e^(-λt)",
-        "D": "Np(0) / λt"
+        "D": "Np(0) × 1 - e^(-λt)"
       },
       "id": 10,
       "answer": "C",
@@ -124,10 +124,10 @@ const quizQuestions = {
     {
       "question": "Il tempo di emivita T1/2 è correlato alla costante di decadimento λ dalla relazione:",
       "options": {
-        "A": "λ = T1/2 / ln(2)",
+        "A": "λ = ln(10) / T1/2",
         "B": "λ = ln(2) / T1/2",
-        "C": "λ = T1/2 × ln(2)",
-        "D": "λ = T1/2^2"
+        "C": "λ = 2ln(2) / T1/2",
+        "D": "λ = ln(2)  ×  T1/2"
       },
       "id": 11,
       "answer": "B",
@@ -196,10 +196,10 @@ const quizQuestions = {
     {
       "question": "Il coefficiente di attenuazione lineare μ è definito come:",
       "options": {
-        "A": "L'energia assorbita per unità di spessore",
+        "A": "La frequenza per unità di area di cammino che un fotone interagisca",
         "B": "La probabilità per unità di lunghezza di cammino che un fotone interagisca",
-        "C": "Il numero di fotoni trasmessi",
-        "D": "La densità del materiale"
+        "C": "La densità per unità di volume di cammino che un fotone interagisca",
+        "D": "La intensità per unità di superficie di cammino che un fotone interagisca"
       },
       "id": 17,
       "answer": "B",
@@ -220,10 +220,10 @@ const quizQuestions = {
     {
       "question": "Lo strato di valore metà (HVL) è lo spessore che:",
       "options": {
-        "A": "Attenua l'intensità del 90%",
+        "A": "Attenua l'intensità del 37.5%",
         "B": "Attenua l'intensità del 50%",
-        "C": "Attenua l'intensità del 36.8%",
-        "D": "Blocca completamente il fascio"
+        "C": "Attenua l'intensità del 75%",
+        "D": "Attenua l'intensità del 100%"
       },
       "id": 19,
       "answer": "B",
@@ -234,8 +234,8 @@ const quizQuestions = {
       "options": {
         "A": "Ek = hν + EB",
         "B": "Ek = hν - EB",
-        "C": "Ek = hν × EB",
-        "D": "Ek = EB - hν"
+        "C": "Ek = EB - hν",
+        "D": "Ek = hν × EB"
       },
       "id": 20,
       "answer": "B",
@@ -268,10 +268,10 @@ const quizQuestions = {
     {
       "question": "La soglia energetica per la produzione di coppie nucleari è:",
       "options": {
-        "A": "511 keV",
+        "A": "0.7665 MeV",
         "B": "1.022 MeV",
-        "C": "2.044 MeV",
-        "D": "1.504 MeV"
+        "C": "1.533 MeV",
+        "D": "2.044 MeV"
       },
       "id": 23,
       "answer": "B",
@@ -340,10 +340,10 @@ const quizQuestions = {
     {
       "question": "Il rapporto α/β rappresenta:",
       "options": {
-        "A": "L'energia di attivazione",
+        "A": "L'energia di attivazione del danno cellulare",
         "B": "La dose alla quale i contributi lineari e quadratici sono uguali",
-        "C": "La costante di riparazione",
-        "D": "La frazione di sopravvivenza"
+        "C": "La costante di riparazione del DNA",
+        "D": "La frazione di sopravvivenza cellulare"
       },
       "id": 29,
       "answer": "B",
@@ -400,10 +400,10 @@ const quizQuestions = {
     {
       "question": "L'effetto 'cross-fire' delle emissioni β può raggiungere:",
       "options": {
-        "A": "100 μm nei tessuti",
-        "B": "1 mm nei tessuti",
+        "A": "Fino a 0.75 cm nei tessuti",
+        "B": "Fino a 1.5 cm nei tessuti",
         "C": "Fino a 1 cm nei tessuti",
-        "D": "10 cm nei tessuti"
+        "D": "Fino a 2 cm nei tessuti"
       },
       "id": 34,
       "answer": "C",
@@ -412,9 +412,9 @@ const quizQuestions = {
     {
       "question": "Quale percentuale dell'esposizione totale alle radiazioni di origine antropica rappresenta l'esposizione medica?",
       "options": {
-        "A": "50%",
-        "B": "75%",
-        "C": "85%",
+        "A": "71.25%",
+        "B": "142.5%",
+        "C": "190%",
         "D": "95%"
       },
       "id": 35,
@@ -460,10 +460,10 @@ const quizQuestions = {
     {
       "question": "La sfera ICRU utilizzata per le quantità operative ha diametro di:",
       "options": {
-        "A": "20 cm",
+        "A": "22.5 cm",
         "B": "30 cm",
-        "C": "40 cm",
-        "D": "50 cm"
+        "C": "45 cm",
+        "D": "60 cm"
       },
       "id": 39,
       "answer": "B",
@@ -472,8 +472,8 @@ const quizQuestions = {
     {
       "question": "Per il monitoraggio personale delle radiazioni penetranti, la dose equivalente Hp(d) utilizza d =:",
       "options": {
-        "A": "0.07 mm",
-        "B": "3 mm",
+        "A": "7.5 mm",
+        "B": "15 mm",
         "C": "10 mm",
         "D": "20 mm"
       },
@@ -640,7 +640,7 @@ const quizQuestions = {
     {
       "question": "Nell'ottimizzazione per bambini, le attività inferiori a quale percentuale dell'attività normale dell'adulto non dovrebbero essere somministrate?",
       "options": {
-        "A": "5%",
+        "A": "7.5%",
         "B": "10%",
         "C": "15%",
         "D": "20%"
@@ -736,10 +736,10 @@ const quizQuestions = {
     {
       "question": "Nel deuterio, la forza nucleare tra protone e neutrone è di circa:",
       "options": {
-        "A": "1.022 MeV",
+        "A": "1.6687500000000002 MeV",
         "B": "2.225 MeV",
-        "C": "3.000 MeV",
-        "D": "4.450 MeV"
+        "C": "3.3375000000000004 MeV",
+        "D": "4.45 MeV"
       },
       "id": 62,
       "answer": "B",
@@ -832,10 +832,10 @@ const quizQuestions = {
     {
       "question": "Nessuna persona sotto quale età deve essere sottoposta a esposizione professionale?",
       "options": {
-        "A": "14 anni",
+        "A": "12 anni",
         "B": "16 anni",
-        "C": "18 anni",
-        "D": "21 anni"
+        "C": "24 anni",
+        "D": "32 anni"
       },
       "id": 70,
       "answer": "B",
@@ -844,15 +844,14 @@ const quizQuestions = {
     {
       "question": "Cosa rappresenta il Q-value (valore Q) in una reazione nucleare?",
       "options": {
-        "A": "Il numero di particelle prodotte nella reazione",
+        "A": "L'potenza guadagnata o persa in una reazione nucleare",
         "B": "L'energia guadagnata o persa in una reazione nucleare",
-        "C": "La sezione d'urto della reazione",
-        "D": "Il tempo di dimezzamento del prodotto"
+        "C": "L'forza guadagnata o persa in una reazione nucleare",
+        "D": "L'momento guadagnata o persa in una reazione nucleare"
       },
-      "ID": 71,
+      "id": 71,
       "answer": "B",
-      "notes": "Il Q-value rappresenta l'energia guadagnata o persa in una reazione nucleare, calcolata come la differenza tra la massa delle particelle prima e dopo la reazione. È positivo per reazioni esotermiche (spontanee) e negativo per reazioni endotermiche.",
-      "id": 71
+      "notes": "Il Q-value rappresenta l'energia guadagnata o persa in una reazione nucleare, calcolata come la differenza tra la massa delle particelle prima e dopo la reazione. È positivo per reazioni esotermiche (spontanee) e negativo per reazioni endotermiche."
     },
     {
       "question": "Qual è la caratteristica principale delle reazioni endotermiche?",
@@ -862,10 +861,9 @@ const quizQuestions = {
         "C": "Hanno Q-value negativo e richiedono energia aggiuntiva",
         "D": "Non coinvolgono particelle cariche"
       },
-      "ID": 72,
+      "id": 72,
       "answer": "C",
-      "notes": "Le reazioni endotermiche hanno valori Q negativi e richiedono energia aggiuntiva per avviare la reazione. Al contrario, i decadimenti radioattivi sono spontanei e hanno sempre valori Q positivi.",
-      "id": 72
+      "notes": "Le reazioni endotermiche hanno valori Q negativi e richiedono energia aggiuntiva per avviare la reazione. Al contrario, i decadimenti radioattivi sono spontanei e hanno sempre valori Q positivi."
     },
     {
       "question": "Perché le reazioni che comportano un cambiamento nel numero di protoni sono preferibili nella produzione di radionuclidi?",
@@ -875,10 +873,9 @@ const quizQuestions = {
         "C": "Hanno sezioni d'urto maggiori",
         "D": "Sono sempre esotermiche"
       },
-      "ID": 73,
+      "id": 73,
       "answer": "B",
-      "notes": "Le reazioni che cambiano il numero di protoni sono preferibili perché il prodotto diventa un elemento diverso dal bersaglio, facilitando la separazione chimica rispetto a una reazione (n,γ) dove prodotto e bersaglio sono dello stesso elemento.",
-      "id": 73
+      "notes": "Le reazioni che cambiano il numero di protoni sono preferibili perché il prodotto diventa un elemento diverso dal bersaglio, facilitando la separazione chimica rispetto a una reazione (n,γ) dove prodotto e bersaglio sono dello stesso elemento."
     },
     {
       "question": "Qual è la principale differenza tra neutroni e particelle cariche nell'interazione con i nuclei?",
@@ -888,10 +885,9 @@ const quizQuestions = {
         "C": "I neutroni possono penetrare anche a energie termiche, le particelle cariche devono superare la barriera di Coulomb",
         "D": "Non c'è differenza significativa"
       },
-      "ID": 74,
+      "id": 74,
       "answer": "C",
-      "notes": "I neutroni non hanno carica elettrica e possono penetrare il bersaglio anche a energie termiche. Le particelle cariche positive devono superare la barriera di Coulomb per penetrare nel nucleo e quindi hanno una soglia energetica.",
-      "id": 74
+      "notes": "I neutroni non hanno carica elettrica e possono penetrare il bersaglio anche a energie termiche. Le particelle cariche positive devono superare la barriera di Coulomb per penetrare nel nucleo e quindi hanno una soglia energetica."
     },
     {
       "question": "Nell'equazione generale di reazione nucleare a + A → b + B + Q, cosa rappresenta 'a'?",
@@ -901,10 +897,9 @@ const quizQuestions = {
         "C": "L'energia della reazione",
         "D": "La particella in uscita"
       },
-      "ID": 75,
+      "id": 75,
       "answer": "B",
-      "notes": "Nell'equazione a + A → b + B + Q: 'a' è la particella in arrivo, 'A' è il nucleo bersaglio, 'b' è la particella in uscita, 'B' è il nucleo residuo e 'Q' è l'energia della reazione.",
-      "id": 75
+      "notes": "Nell'equazione a + A → b + B + Q: 'a' è la particella in arrivo, 'A' è il nucleo bersaglio, 'b' è la particella in uscita, 'B' è il nucleo residuo e 'Q' è l'energia della reazione."
     },
     {
       "question": "Cosa caratterizza ogni canale di reazione nucleare?",
@@ -914,23 +909,21 @@ const quizQuestions = {
         "C": "Una soglia di energia e una probabilità (sezione d'urto)",
         "D": "Solo il tipo di particelle coinvolte"
       },
-      "ID": 76,
+      "id": 76,
       "answer": "C",
-      "notes": "Ogni canale di reazione è caratterizzato da una soglia di energia (energia che rende possibile la reazione) e da una probabilità (sezione d'urto) che varia con l'energia della particella in arrivo.",
-      "id": 76
+      "notes": "Ogni canale di reazione è caratterizzato da una soglia di energia (energia che rende possibile la reazione) e da una probabilità (sezione d'urto) che varia con l'energia della particella in arrivo."
     },
     {
       "question": "In cosa si distingue il meccanismo di formazione del nucleo composto dalle reazioni dirette?",
       "options": {
-        "A": "La formazione del nucleo composto avviene ad alta energia",
+        "A": "La formazione del nucleo composto avviene ad elevata energia",
         "B": "La formazione del nucleo composto è preferibile a basse energie, le reazioni dirette ad alta energia",
         "C": "Non c'è differenza nei meccanismi",
         "D": "Le reazioni dirette sono più probabili a basse energie"
       },
-      "ID": 77,
+      "id": 77,
       "answer": "B",
-      "notes": "Il nucleo composto ha grande probabilità di formarsi a basse energie, vicino alla soglia di energia del canale. Le reazioni dirette trasferiscono energia direttamente a un nucleone e sono prevalenti ad energie più alte.",
-      "id": 77
+      "notes": "Il nucleo composto ha grande probabilità di formarsi a basse energie, vicino alla soglia di energia del canale. Le reazioni dirette trasferiscono energia direttamente a un nucleone e sono prevalenti ad energie più alte."
     },
     {
       "question": "Quali sono i due modi principali per produrre radionuclidi?",
@@ -940,10 +933,9 @@ const quizQuestions = {
         "C": "Cattura elettronica e decadimento beta",
         "D": "Bombardamento con raggi gamma e particelle alfa"
       },
-      "ID": 78,
+      "id": 78,
       "answer": "B",
-      "notes": "I due modi principali per produrre radionuclidi sono: utilizzando reattori nucleari (neutroni) oppure acceleratori di particelle (protoni, deuteroni, particelle α o ioni pesanti).",
-      "id": 78
+      "notes": "I due modi principali per produrre radionuclidi sono: utilizzando reattori nucleari (neutroni) oppure acceleratori di particelle (protoni, deuteroni, particelle α o ioni pesanti)."
     },
     {
       "question": "Che tipo di radionuclidi si ottengono generalmente da reattori nucleari rispetto agli acceleratori?",
@@ -953,10 +945,9 @@ const quizQuestions = {
         "C": "Non c'è differenza",
         "D": "Dipende solo dal bersaglio utilizzato"
       },
-      "ID": 79,
+      "id": 79,
       "answer": "B",
-      "notes": "Poiché il bersaglio è un nuclide stabile, si ottiene generalmente un radionuclide ricco di neutroni (prodotto da reattore) oppure povero di neutroni (prodotto da acceleratore).",
-      "id": 79
+      "notes": "Poiché il bersaglio è un nuclide stabile, si ottiene generalmente un radionuclide ricco di neutroni (prodotto da reattore) oppure povero di neutroni (prodotto da acceleratore)."
     },
     {
       "question": "Qual è il flusso neutronico tipico in un reattore nucleare?",
@@ -966,10 +957,9 @@ const quizQuestions = {
         "C": "10¹⁴ neutroni · cm⁻² · s⁻¹",
         "D": "10¹⁶ neutroni · cm⁻² · s⁻¹"
       },
-      "ID": 80,
+      "id": 80,
       "answer": "C",
-      "notes": "In un reattore nucleare, regolando la reazione nucleare a catena, si ottiene uno stato stazionario di produzione neutronica con un flusso neutronico tipico dell'ordine di 10¹⁴ neutroni · cm⁻² · s⁻¹.",
-      "id": 80
+      "notes": "In un reattore nucleare, regolando la reazione nucleare a catena, si ottiene uno stato stazionario di produzione neutronica con un flusso neutronico tipico dell'ordine di 10¹⁴ neutroni · cm⁻² · s⁻¹."
     },
     {
       "question": "Qual è la reazione neutronica più tipica utilizzata nella produzione di radionuclidi?",
@@ -979,10 +969,9 @@ const quizQuestions = {
         "C": "(n,γ) - cattura di neutroni termici",
         "D": "(n,2n) - emissione di due neutroni"
       },
-      "ID": 81,
+      "id": 81,
       "answer": "C",
-      "notes": "La reazione neutronica più tipica è la reazione (n,γ) in cui un neutrone termico viene catturato dal nucleo bersaglio formando un nucleo composto. L'energia di decadimento viene emessa sotto forma di un raggio γ prompt.",
-      "id": 81
+      "notes": "La reazione neutronica più tipica è la reazione (n,γ) in cui un neutrone termico viene catturato dal nucleo bersaglio formando un nucleo composto. L'energia di decadimento viene emessa sotto forma di un raggio γ prompt."
     },
     {
       "question": "Perché la reazione ⁵⁹Co(n,γ)⁶⁰Co ha scarso interesse per la marcatura di radiofarmaci?",
@@ -992,49 +981,45 @@ const quizQuestions = {
         "C": "L'attività specifica è bassa perché prodotto e bersaglio sono dello stesso elemento",
         "D": "Il prodotto è instabile"
       },
-      "ID": 82,
+      "id": 82,
       "answer": "C",
-      "notes": "La reazione ⁵⁹Co(n,γ)⁶⁰Co produce un importante radionuclide per terapia esterna, ma poiché il prodotto è dello stesso elemento del bersaglio, l'attività specifica è bassa, rendendola di scarso interesse per la marcatura di radiofarmaci.",
-      "id": 82
+      "notes": "La reazione ⁵⁹Co(n,γ)⁶⁰Co produce un importante radionuclide per terapia esterna, ma poiché il prodotto è dello stesso elemento del bersaglio, l'attività specifica è bassa, rendendola di scarso interesse per la marcatura di radiofarmaci."
     },
     {
       "question": "Qual è la sezione d'urto del ¹⁷⁶Lu che permette una buona produzione di ¹⁷⁷Lu?",
       "options": {
-        "A": "200 barn",
-        "B": "586 barn",
+        "A": "1515 barn",
+        "B": "3030 barn",
         "C": "2020 barn",
-        "D": "60 millibarn"
+        "D": "4040 barn"
       },
-      "ID": 83,
+      "id": 83,
       "answer": "C",
-      "notes": "Il ¹⁷⁶Lu ha un'alta sezione d'urto di 2020 barn, che porta alla conversione di una grande frazione degli atomi bersaglio in ¹⁷⁷Lu, garantendo un'attività specifica accettabile nonostante l'abbondanza naturale sia solo del 2,59%.",
-      "id": 83
+      "notes": "Il ¹⁷⁶Lu ha un'alta sezione d'urto di 2020 barn, che porta alla conversione di una grande frazione degli atomi bersaglio in ¹⁷⁷Lu, garantendo un'attività specifica accettabile nonostante l'abbondanza naturale sia solo del 2,59%."
     },
     {
       "question": "Qual è la soglia energetica per la produzione significativa di ³²P?",
       "options": {
-        "A": "0,51 MeV, produzione significativa sopra 1 MeV",
+        "A": "0,38.25 MeV, produzione significativa sopra 2 MeV",
         "B": "0,51 MeV, produzione significativa sopra 2 MeV",
-        "C": "1 MeV, produzione significativa sopra 3 MeV",
-        "D": "2 MeV, produzione significativa sopra 5 MeV"
+        "C": "0,76.5 MeV, produzione significativa sopra 2 MeV",
+        "D": "0,102 MeV, produzione significativa sopra 2 MeV"
       },
-      "ID": 84,
+      "id": 84,
       "answer": "B",
-      "notes": "Per il ³²P, la soglia della reazione è 0,51 MeV, ma la produzione è significativa solo sopra 2 MeV. La sezione d'urto pratica è circa 60 millibarn.",
-      "id": 84
+      "notes": "Per il ³²P, la soglia della reazione è 0,51 MeV, ma la produzione è significativa solo sopra 2 MeV. La sezione d'urto pratica è circa 60 millibarn."
     },
     {
       "question": "Qual è la sezione d'urto dell'²³⁵U per la fissione con neutroni termici?",
       "options": {
-        "A": "200 barn",
+        "A": "439.5 barn",
         "B": "586 barn",
-        "C": "2020 barn",
-        "D": "60 millibarn"
+        "C": "879 barn",
+        "D": "1172 barn"
       },
-      "ID": 85,
+      "id": 85,
       "answer": "B",
-      "notes": "L'uranio-235 irradiato con neutroni termici subisce fissione con una sezione d'urto di 586 barn. Il processo produce due frammenti del nucleo più un certo numero di neutroni liberi.",
-      "id": 85
+      "notes": "L'uranio-235 irradiato con neutroni termici subisce fissione con una sezione d'urto di 586 barn. Il processo produce due frammenti del nucleo più un certo numero di neutroni liberi."
     },
     {
       "question": "Quali radionuclidi di importanza medica sono prodotti per fissione tramite sistema generatore?",
@@ -1044,10 +1029,9 @@ const quizQuestions = {
         "C": "¹⁷⁷Lu → ¹⁷⁷Hf e ¹²³I → ¹²³Te",
         "D": "³²P → ³²S e ⁸⁹Sr → ⁸⁹Y"
       },
-      "ID": 86,
+      "id": 86,
       "answer": "A",
-      "notes": "I radionuclidi medici prodotti per fissione tramite generatori sono: ⁹⁰Sr (28,5 anni) → ⁹⁰Y (2,3 giorni) per terapia e ⁹⁹Mo (2,7 giorni) → ⁹⁹ᵐTc (6 ore) per diagnostica.",
-      "id": 86
+      "notes": "I radionuclidi medici prodotti per fissione tramite generatori sono: ⁹⁰Sr (28,5 anni) → ⁹⁰Y (2,3 giorni) per terapia e ⁹⁹Mo (2,7 giorni) → ⁹⁹ᵐTc (6 ore) per diagnostica."
     },
     {
       "question": "Qual è il principale vantaggio della produzione tramite acceleratore?",
@@ -1057,10 +1041,9 @@ const quizQuestions = {
         "C": "Il prodotto è solitamente un elemento diverso dal bersaglio, permettendo alta attività specifica",
         "D": "Ha sezioni d'urto maggiori"
       },
-      "ID": 87,
+      "id": 87,
       "answer": "C",
-      "notes": "Il vantaggio principale della produzione tramite acceleratore è che di solito è facile trovare una reazione in cui il prodotto è un elemento diverso dal bersaglio, permettendo separazione chimica e alta attività specifica.",
-      "id": 87
+      "notes": "Il vantaggio principale della produzione tramite acceleratore è che di solito è facile trovare una reazione in cui il prodotto è un elemento diverso dal bersaglio, permettendo separazione chimica e alta attività specifica."
     },
     {
       "question": "Come si misura la corrente di particelle cariche in un acceleratore?",
@@ -1070,10 +1053,9 @@ const quizQuestions = {
         "C": "In barn per secondo",
         "D": "In MeV per particella"
       },
-      "ID": 88,
+      "id": 88,
       "answer": "B",
-      "notes": "Il numero di particelle cariche viene misurato come corrente elettrica in microampere (1 μA = 6 × 10¹² protoni/s ma 3 × 10¹² alfa/s a causa delle due cariche della particella α).",
-      "id": 88
+      "notes": "Il numero di particelle cariche viene misurato come corrente elettrica in microampere (1 μA = 6 × 10¹² protoni/s ma 3 × 10¹² alfa/s a causa delle due cariche della particella α)."
     },
     {
       "question": "Qual è lo svantaggio principale delle particelle cariche rispetto ai neutroni?",
@@ -1083,10 +1065,9 @@ const quizQuestions = {
         "C": "Non possono essere accelerate",
         "D": "Hanno sezioni d'urto minori"
       },
-      "ID": 89,
+      "id": 89,
       "answer": "B",
-      "notes": "Le particelle cariche vengono fermate più facilmente rispetto ai neutroni; per esempio, protoni da 16 MeV vengono fermati in 0,6 mm di Cu.",
-      "id": 89
+      "notes": "Le particelle cariche vengono fermate più facilmente rispetto ai neutroni; per esempio, protoni da 16 MeV vengono fermati in 0,6 mm di Cu."
     },
     {
       "question": "Quali sono i quattro sistemi principali di un ciclotrone?",
@@ -1096,36 +1077,33 @@ const quizQuestions = {
         "C": "Camera, elettrodi, trasformatore, controllo",
         "D": "Iniettore, separatore, rivelatore, computer"
       },
-      "ID": 90,
+      "id": 90,
       "answer": "A",
-      "notes": "Il ciclotrone è composto da: a) magnete resistivo (1-2 T), b) sistema a vuoto (10⁻⁵ Pa), c) sistema ad alta frequenza (~40 MHz, ~40 kV), d) sorgente di ioni per idrogeno, deuterio e particelle α.",
-      "id": 90
+      "notes": "Il ciclotrone è composto da: a) magnete resistivo (1-2 T), b) sistema a vuoto (10⁻⁵ Pa), c) sistema ad alta frequenza (~40 MHz, ~40 kV), d) sorgente di ioni per idrogeno, deuterio e particelle α."
     },
     {
       "question": "Qual è la regola pratica per l'energia necessaria per espellere particelle in una reazione nucleare?",
       "options": {
-        "A": "5 MeV per ogni particella espulsa",
+        "A": "7.5 MeV per ogni particella espulsa",
         "B": "10 MeV per ogni particella espulsa",
         "C": "15 MeV per ogni particella espulsa",
         "D": "20 MeV per ogni particella espulsa"
       },
-      "ID": 91,
+      "id": 91,
       "answer": "B",
-      "notes": "La regola pratica è che servono circa 10 MeV per ogni particella espulsa. Per esempio, una reazione che espelle cinque neutroni richiede circa 5 × 10 MeV = 50 MeV.",
-      "id": 91
+      "notes": "La regola pratica è che servono circa 10 MeV per ogni particella espulsa. Per esempio, una reazione che espelle cinque neutroni richiede circa 5 × 10 MeV = 50 MeV."
     },
     {
       "question": "Perché negli acceleratori moderni si preferisce accelerare ioni negativi?",
       "options": {
-        "A": "Richiedono meno energia",
-        "B": "Hanno sezioni d'urto maggiori",
+        "A": "Permettono estrazione con efficienza quasi del 75% e poca attivazione",
+        "B": "Permettono estrazione con efficienza quasi del 150% e poca attivazione",
         "C": "Permettono estrazione con efficienza quasi del 100% e poca attivazione",
-        "D": "Sono più stabili"
+        "D": "Permettono estrazione con efficienza quasi del 200% e poca attivazione"
       },
-      "ID": 92,
+      "id": 92,
       "answer": "C",
-      "notes": "Gli acceleratori moderni per protoni/deuterio accelerano ioni negativi che, strappando via gli elettroni con una lamina di carbonio, cambiano carica e vengono deviati fuori dal campo magnetico con efficienza quasi del 100% e poca attivazione.",
-      "id": 92
+      "notes": "Gli acceleratori moderni per protoni/deuterio accelerano ioni negativi che, strappando via gli elettroni con una lamina di carbonio, cambiano carica e vengono deviati fuori dal campo magnetico con efficienza quasi del 100% e poca attivazione."
     },
     {
       "question": "Cosa succede alle particelle oltre 30 MeV negli acceleratori?",
@@ -1135,10 +1113,9 @@ const quizQuestions = {
         "C": "Perdono carica elettrica",
         "D": "Non possono essere accelerate"
       },
-      "ID": 93,
+      "id": 93,
       "answer": "B",
-      "notes": "Per energie superiori a 30 MeV, le particelle tendono a diventare relativistiche. Sono stati introdotti nuovi metodi come ciclotroni isocronici e sincrociclotroni per compensare questi effetti.",
-      "id": 93
+      "notes": "Per energie superiori a 30 MeV, le particelle tendono a diventare relativistiche. Sono stati introdotti nuovi metodi come ciclotroni isocronici e sincrociclotroni per compensare questi effetti."
     },
     {
       "question": "Cosa è un generatore di radionuclidi?",
@@ -1148,10 +1125,9 @@ const quizQuestions = {
         "C": "Un acceleratore per particelle leggere",
         "D": "Un reattore nucleare portatile"
       },
-      "ID": 94,
+      "id": 94,
       "answer": "B",
-      "notes": "Un generatore di radionuclidi è un sistema in cui un radionuclide madre decade in un altro nuclide radioattivo figlia. Il caso speciale è quando una madre a lunga vita genera una figlia a breve vita per uso medico.",
-      "id": 94
+      "notes": "Un generatore di radionuclidi è un sistema in cui un radionuclide madre decade in un altro nuclide radioattivo figlia. Il caso speciale è quando una madre a lunga vita genera una figlia a breve vita per uso medico."
     },
     {
       "question": "Qual è l'esempio più importante di generatore in medicina nucleare?",
@@ -1161,10 +1137,9 @@ const quizQuestions = {
         "C": "⁹⁹Mo-⁹⁹ᵐTc",
         "D": "⁸¹Rb-⁸¹ᵐKr"
       },
-      "ID": 95,
+      "id": 95,
       "answer": "C",
-      "notes": "L'esempio più importante è ⁹⁹Mo → ⁹⁹ᵐTc. La madre (2,7 giorni) è adeguata per trasporto e consegna, mentre la figlia (6 ore) è adatta per indagini sui pazienti.",
-      "id": 95
+      "notes": "L'esempio più importante è ⁹⁹Mo → ⁹⁹ᵐTc. La madre (2,7 giorni) è adeguata per trasporto e consegna, mentre la figlia (6 ore) è adatta per indagini sui pazienti."
     },
     {
       "question": "Come funziona il generatore ⁹⁹Mo/⁹⁹ᵐTc?",
@@ -1174,23 +1149,21 @@ const quizQuestions = {
         "C": "⁹⁹Mo è separato per centrifugazione",
         "D": "⁹⁹Mo è estratto con solventi organici"
       },
-      "ID": 96,
+      "id": 96,
       "answer": "B",
-      "notes": "Nel generatore ⁹⁹Mo/⁹⁹ᵐTc, il ⁹⁹Mo è adsorbito su allumina. L'eluizione con soluzione fisiologica eluirà il ⁹⁹ᵐTc solubile in pochi millilitri di liquido.",
-      "id": 96
+      "notes": "Nel generatore ⁹⁹Mo/⁹⁹ᵐTc, il ⁹⁹Mo è adsorbito su allumina. L'eluizione con soluzione fisiologica eluirà il ⁹⁹ᵐTc solubile in pochi millilitri di liquido."
     },
     {
       "question": "Cosa rappresenta l'attività specifica in radiofarmacia?",
       "options": {
-        "A": "L'energia per unità di massa",
+        "A": "L'attività per volume di una preparazione",
         "B": "L'attività per massa di una preparazione",
-        "C": "Il numero di particelle emesse per secondo",
-        "D": "La sezione d'urto per grammo"
+        "C": "L'attività per densità di una preparazione",
+        "D": "L'attività per peso di una preparazione"
       },
-      "ID": 97,
+      "id": 97,
       "answer": "B",
-      "notes": "L'attività specifica a è l'attività per massa di una preparazione, essenziale in radiofarmacia. Se il 100% contiene atomi radioattivi (a teorica), allora A/N = λ = ln(2)/T₁/₂.",
-      "id": 97
+      "notes": "L'attività specifica a è l'attività per massa di una preparazione, essenziale in radiofarmacia. Se il 100% contiene atomi radioattivi (a teorica), allora A/N = λ = ln(2)/T₁/₂."
     },
     {
       "question": "Cosa significa \"senza portatore\" (carrier-free) nella produzione di radionuclidi?",
@@ -1200,10 +1173,9 @@ const quizQuestions = {
         "C": "Il processo non richiede catalizzatori",
         "D": "La separazione avviene senza solventi"
       },
-      "ID": 98,
+      "id": 98,
       "answer": "B",
-      "notes": "Un processo \"senza portatore\" (carrier-free) significa che gli atomi radioattivi sono prodotti e separati dal bersaglio senza alcun isotopo stabile, risultando in un'attività specifica finale elevata.",
-      "id": 98
+      "notes": "Un processo \"senza portatore\" (carrier-free) significa che gli atomi radioattivi sono prodotti e separati dal bersaglio senza alcun isotopo stabile, risultando in un'attività specifica finale elevata."
     },
     {
       "question": "Quali sono i tre tipi di errori di misura nelle radiazioni?",
@@ -1213,10 +1185,9 @@ const quizQuestions = {
         "C": "Grossolani, sistematici, casuali",
         "D": "Fisici, chimici, biologici"
       },
-      "ID": 99,
+      "id": 99,
       "answer": "C",
-      "notes": "I tre tipi di errori di misura sono: errori grossolani (blunders) - molto inaccurati e facili da identificare; errori sistematici - influenzano l'accuratezza; errori casuali - influenzano la precisione.",
-      "id": 99
+      "notes": "I tre tipi di errori di misura sono: errori grossolani (blunders) - molto inaccurati e facili da identificare; errori sistematici - influenzano l'accuratezza; errori casuali - influenzano la precisione."
     },
     {
       "question": "Cosa caratterizza gli errori sistematici?",
@@ -1226,10 +1197,9 @@ const quizQuestions = {
         "C": "Sono facili da rilevare",
         "D": "Influenzano solo la velocità di misura"
       },
-      "ID": 100,
+      "id": 100,
       "answer": "B",
-      "notes": "Gli errori sistematici producono risultati che differiscono costantemente dai risultati corretti di una quantità fissa. Influenzano l'accuratezza, non sempre sono facili da rilevare e possono essere rilevati utilizzando standard di riferimento.",
-      "id": 100
+      "notes": "Gli errori sistematici producono risultati che differiscono costantemente dai risultati corretti di una quantità fissa. Influenzano l'accuratezza, non sempre sono facili da rilevare e possono essere rilevati utilizzando standard di riferimento."
     },
     {
       "question": "Da cosa derivano gli errori casuali nelle misurazioni di radiazioni?",
@@ -1239,10 +1209,9 @@ const quizQuestions = {
         "C": "Da variazione casuale della grandezza misurata e limitazioni fisiche del sistema",
         "D": "Solo da interferenze elettromagnetiche"
       },
-      "ID": 101,
+      "id": 101,
       "answer": "C",
-      "notes": "Gli errori casuali derivano da: variazione casuale effettiva della grandezza misurata e limitazioni fisiche del sistema di misura. Influenzano riproducibilità, precisione e incertezza delle misurazioni.",
-      "id": 101
+      "notes": "Gli errori casuali derivano da: variazione casuale effettiva della grandezza misurata e limitazioni fisiche del sistema di misura. Influenzano riproducibilità, precisione e incertezza delle misurazioni."
     },
     {
       "question": "Come varia l'errore casuale relativo in funzione dei conteggi?",
@@ -1252,10 +1221,9 @@ const quizQuestions = {
         "C": "Diminuisce all'aumentare dei conteggi per pixel",
         "D": "Non dipende dai conteggi"
       },
-      "ID": 102,
+      "id": 102,
       "answer": "C",
-      "notes": "L'errore casuale relativo diminuisce all'aumentare dei conteggi per pixel. All'aumentare di Ntotale: aumentano i conteggi per pixel, diminuisce l'errore casuale e migliora la qualità dell'immagine visiva.",
-      "id": 102
+      "notes": "L'errore casuale relativo diminuisce all'aumentare dei conteggi per pixel. All'aumentare di Ntotale: aumentano i conteggi per pixel, diminuisce l'errore casuale e migliora la qualità dell'immagine visiva."
     },
     {
       "question": "Qual è la formula per calcolare la media sperimentale di N misurazioni indipendenti?",
@@ -1265,10 +1233,9 @@ const quizQuestions = {
         "C": "x̄ₑ = √(x₁ + x₂ + ... + xₙ)",
         "D": "x̄ₑ = N / (x₁ + x₂ + ... + xₙ)"
       },
-      "ID": 103,
+      "id": 103,
       "answer": "B",
-      "notes": "La media sperimentale di N misurazioni indipendenti x₁, x₂, x₃, ..., xₙ è data da: x̄ₑ = (x₁ + x₂ + ... + xₙ)/N = Σxᵢ/N.",
-      "id": 103
+      "notes": "La media sperimentale di N misurazioni indipendenti x₁, x₂, x₃, ..., xₙ è data da: x̄ₑ = (x₁ + x₂ + ... + xₙ)/N = Σxᵢ/N."
     },
     {
       "question": "Cosa rappresenta l'inverso della deviazione standard frazionaria?",
@@ -1278,10 +1245,9 @@ const quizQuestions = {
         "C": "La frequenza di conteggio",
         "D": "L'efficienza del rivelatore"
       },
-      "ID": 104,
+      "id": 104,
       "answer": "B",
-      "notes": "La deviazione standard frazionaria è σₑF = σₑ/x̄ₑ. L'inverso di σₑF è denominato rapporto segnale/rumore, un parametro importante per valutare la qualità delle misurazioni.",
-      "id": 104
+      "notes": "La deviazione standard frazionaria è σₑF = σₑ/x̄ₑ. L'inverso di σₑF è denominato rapporto segnale/rumore, un parametro importante per valutare la qualità delle misurazioni."
     },
     {
       "question": "Quale distribuzione statistica si applica quando la probabilità di successo p è piccola?",
@@ -1291,13 +1257,11 @@ const quizQuestions = {
         "C": "Distribuzione di Poisson",
         "D": "Distribuzione esponenziale"
       },
-      "ID": 105,
+      "id": 105,
       "answer": "C",
-      "notes": "La distribuzione di Poisson è una semplificazione matematica della binomiale quando p è piccola. Deve essere usata per il conteggio nucleare quando il tempo di osservazione << T₁/₂ della sorgente e l'efficienza di rilevamento è bassa.",
-      "id": 105
+      "notes": "La distribuzione di Poisson è una semplificazione matematica della binomiale quando p è piccola. Deve essere usata per il conteggio nucleare quando il tempo di osservazione << T₁/₂ della sorgente e l'efficienza di rilevamento è bassa."
     },
     {
-      "id": 106,
       "question": "Nel decadimento radioattivo a equilibrio, cosa rappresenta il rapporto A_D(t)/A_p(t) quando λ_D > λ_p?",
       "options": {
         "A": "È sempre uguale a 1",
@@ -1305,11 +1269,11 @@ const quizQuestions = {
         "C": "È una funzione decrescente del tempo",
         "D": "È sempre minore di 1"
       },
+      "id": 106,
       "answer": "B",
       "notes": "Quando l'emivita del figlio è maggiore di quella del genitore (T₁/₂_D > T₁/₂_P), il rapporto A_D(t)/A_p(t) = λ_D/(λ_D - λ_p) = costante > 1."
     },
     {
-      "id": 107,
       "question": "Quale modalità di decadimento radioattivo causa un aumento di Z senza variazione di A?",
       "options": {
         "A": "Decadimento α",
@@ -1317,11 +1281,11 @@ const quizQuestions = {
         "C": "Decadimento β⁺",
         "D": "Cattura elettronica"
       },
+      "id": 107,
       "answer": "B",
       "notes": "Nel decadimento β⁻, un neutrone si trasforma in protone emettendo un elettrone e un antineutrino, causando Z → Z+1 ma A rimane costante."
     },
     {
-      "id": 108,
       "question": "Nel decadimento α, quale è il range tipico delle particelle α nel tessuto?",
       "options": {
         "A": "1-10 cm",
@@ -1329,11 +1293,11 @@ const quizQuestions = {
         "C": "1-10 mm",
         "D": "1-10 m"
       },
+      "id": 108,
       "answer": "B",
       "notes": "Le particelle α hanno un range molto limitato nel tessuto di 10-100 micron, pur avendo energie di 4-9 MeV."
     },
     {
-      "id": 109,
       "question": "L'energia di disintegrazione Q in un decadimento radioattivo è data da:",
       "options": {
         "A": "Q = [M(P) + M(D) + m]c²",
@@ -1341,11 +1305,11 @@ const quizQuestions = {
         "C": "Q = [M(D) - M(P) - m]c²",
         "D": "Q = [M(P) - M(D) + m]c²"
       },
+      "id": 109,
       "answer": "B",
       "notes": "L'energia Q rappresenta la differenza di massa a riposo tra genitore e prodotti: Q = [M(P) - M(D) - m]c², dove m sono le particelle emesse."
     },
     {
-      "id": 110,
       "question": "La conversione interna nel decadimento gamma produce:",
       "options": {
         "A": "Solo fotoni caratteristici",
@@ -1353,11 +1317,11 @@ const quizQuestions = {
         "C": "Un elettrone orbitale con energia specifica",
         "D": "Neutrini"
       },
+      "id": 110,
       "answer": "C",
       "notes": "La conversione interna produce un elettrone orbitale con energia uguale all'energia del fotone gamma meno l'energia di legame dell'elettrone."
     },
     {
-      "id": 111,
       "question": "Nell'interazione delle particelle cariche con la materia, l'energia di frenata si divide in:",
       "options": {
         "A": "s_col e s_rad",
@@ -1365,59 +1329,59 @@ const quizQuestions = {
         "C": "s_alpha e s_beta",
         "D": "s_elastica e s_anelastica"
       },
+      "id": 111,
       "answer": "A",
       "notes": "L'energia di frenata totale è s_col + s_rad, dove s_col regola le interazioni con gli elettroni orbitali e s_rad con i nuclei."
     },
     {
-      "id": 112,
       "question": "Il coefficiente di attenuazione lineare μ è definito come:",
       "options": {
-        "A": "La frazione di fotoni che attraversano il materiale",
+        "A": "La frequenza per unità di area che un fotone interagisca",
         "B": "La probabilità per unità di lunghezza che un fotone interagisca",
-        "C": "L'energia depositata per unità di massa",
-        "D": "Il numero di fotoni per unità di volume"
+        "C": "La densità per unità di volume che un fotone interagisca",
+        "D": "La intensità per unità di superficie che un fotone interagisca"
       },
+      "id": 112,
       "answer": "B",
       "notes": "μ rappresenta la 'probabilità per unità di lunghezza di cammino' che un fotone interagisca con l'assorbitore."
     },
     {
-      "id": 113,
       "question": "Lo strato di valore metà (HVL) è lo spessore che attenua l'intensità del fascio del:",
       "options": {
-        "A": "90%",
-        "B": "63.2%",
+        "A": "37.5%",
+        "B": "75%",
         "C": "50%",
-        "D": "36.8%"
+        "D": "100%"
       },
+      "id": 113,
       "answer": "C",
       "notes": "HVL = ln2/μ = 0.693/μ è lo spessore che riduce l'intensità al 50% del valore iniziale."
     },
     {
-      "id": 114,
       "question": "Il percorso libero medio (MFP) corrisponde a una attenuazione del:",
       "options": {
-        "A": "50%",
+        "A": "47.400000000000006%",
         "B": "63.2%",
-        "C": "90%",
-        "D": "99%"
+        "C": "94.80000000000001%",
+        "D": "126.4%"
       },
+      "id": 114,
       "answer": "B",
       "notes": "MFP = 1/μ corrisponde a una attenuazione del 63.2% (1-1/e = 0.632), lasciando il 36.8% dell'intensità iniziale."
     },
     {
-      "id": 115,
       "question": "Nell'effetto fotoelettrico, l'energia del fotoelettrone espulso è:",
       "options": {
-        "A": "E_k = hν",
-        "B": "E_k = hν - E_B",
-        "C": "E_k = hν + E_B",
-        "D": "E_k = E_B - hν"
+        "A": "Ek = hν",
+        "B": "Ek = hν - EB",
+        "C": "Ek = hν + EB",
+        "D": "Ek = EB - hν"
       },
+      "id": 115,
       "answer": "B",
       "notes": "L'energia cinetica del fotoelettrone è E_k = hν - E_B, dove hν è l'energia del fotone incidente ed E_B l'energia di legame."
     },
     {
-      "id": 116,
       "question": "Il coefficiente di attenuazione fotoelettrico di massa τ/ρ è proporzionale a:",
       "options": {
         "A": "Z³/(hν)²",
@@ -1425,11 +1389,11 @@ const quizQuestions = {
         "C": "Z²/(hν)²",
         "D": "Z⁵/(hν)⁴"
       },
+      "id": 116,
       "answer": "B",
       "notes": "τ/ρ ∼ Z⁴/(hν)³, mostrando forte dipendenza dal numero atomico e inversamente dal cubo dell'energia del fotone."
     },
     {
-      "id": 117,
       "question": "Nello scattering di Rayleigh:",
       "options": {
         "A": "Il fotone perde energia significativa",
@@ -1437,11 +1401,11 @@ const quizQuestions = {
         "C": "Il fotone viene completamente assorbito",
         "D": "Si produce una coppia elettrone-positrone"
       },
+      "id": 117,
       "answer": "B",
       "notes": "Lo scattering di Rayleigh è elastico: il fotone non perde energia ma viene diffuso con un angolo relativamente piccolo."
     },
     {
-      "id": 118,
       "question": "L'equazione fondamentale di Compton per lo spostamento di lunghezza d'onda è:",
       "options": {
         "A": "Δλ = λ_C(1 + cosθ)",
@@ -1449,11 +1413,11 @@ const quizQuestions = {
         "C": "Δλ = λ_C(1 + sinθ)",
         "D": "Δλ = λ_C cosθ"
       },
+      "id": 118,
       "answer": "B",
       "notes": "Δλ = λ_C(1 - cosθ), dove λ_C = h/(m_e c) = 0.024 Å è la lunghezza d'onda Compton dell'elettrone."
     },
     {
-      "id": 119,
       "question": "Nell'effetto Compton, il massimo trasferimento di energia all'elettrone avviene quando:",
       "options": {
         "A": "θ = 0° (scattering in avanti)",
@@ -1461,35 +1425,35 @@ const quizQuestions = {
         "C": "θ = 180° (backscattering)",
         "D": "θ = 45°"
       },
+      "id": 119,
       "answer": "C",
       "notes": "Il massimo trasferimento di energia all'elettrone di rinculo avviene nel backscattering (θ = 180°)."
     },
     {
-      "id": 120,
       "question": "La soglia energetica per la produzione di coppie nucleari è:",
       "options": {
-        "A": "0.511 MeV",
+        "A": "0.7665 MeV",
         "B": "1.022 MeV",
-        "C": "2.044 MeV",
-        "D": "3.066 MeV"
+        "C": "1.533 MeV",
+        "D": "2.044 MeV"
       },
+      "id": 120,
       "answer": "B",
       "notes": "La produzione di coppie nucleari richiede E_γ > 2m_e c² = 1.022 MeV per creare una coppia elettrone-positrone."
     },
     {
-      "id": 121,
       "question": "La soglia per la produzione di triplette è:",
       "options": {
-        "A": "1.022 MeV",
+        "A": "1.533 MeV",
         "B": "2.044 MeV",
         "C": "3.066 MeV",
         "D": "4.088 MeV"
       },
+      "id": 121,
       "answer": "B",
       "notes": "La produzione di triplette nel campo di un elettrone orbitale richiede E_γ > 4m_e c² = 2.044 MeV."
     },
     {
-      "id": 122,
       "question": "In radiobiologia, cosa si intende per ionizzazione?",
       "options": {
         "A": "L'elettrone viene portato a un livello energetico superiore",
@@ -1497,11 +1461,11 @@ const quizQuestions = {
         "C": "L'atomo emette un fotone",
         "D": "Il nucleo si divide in due parti"
       },
+      "id": 122,
       "answer": "B",
       "notes": "La ionizzazione è il processo in cui l'elettrone riceve energia sufficiente per essere espulso dalla sua orbita, lasciando l'atomo ospite."
     },
     {
-      "id": 123,
       "question": "Le modifiche chimiche iniziali dopo l'irradiazione avvengono su una scala temporale di circa:",
       "options": {
         "A": "10⁻¹² s",
@@ -1509,23 +1473,23 @@ const quizQuestions = {
         "C": "10⁻³ s",
         "D": "1 s"
       },
+      "id": 123,
       "answer": "B",
       "notes": "Le modifiche chimiche avvengono su una scala di ~10⁻⁵ s, molto più lunga del tempo di attraversamento delle particelle originali."
     },
     {
-      "id": 124,
       "question": "Le radiazioni gamma sono caratterizzate da:",
       "options": {
-        "A": "Energia tipicamente < 25 keV",
+        "A": "Energia tipicamente > 18.75 keV",
         "B": "Energia tipicamente > 25 keV",
-        "C": "Massa significativa",
-        "D": "Carica elettrica"
+        "C": "Energia tipicamente > 37.5 keV",
+        "D": "Energia tipicamente > 50 keV"
       },
+      "id": 124,
       "answer": "B",
       "notes": "Le radiazioni gamma sono radiazioni elettromagnetiche ad alta energia, solitamente > 25 keV, senza massa né carica."
     },
     {
-      "id": 125,
       "question": "Nel decadimento β⁻, l'energia media delle particelle β è circa:",
       "options": {
         "A": "1/4 dell'energia massima",
@@ -1533,11 +1497,11 @@ const quizQuestions = {
         "C": "1/2 dell'energia massima",
         "D": "2/3 dell'energia massima"
       },
+      "id": 125,
       "answer": "B",
       "notes": "L'energia media delle particelle β⁻ è circa 1/3 dell'energia massima dello spettro continuo."
     },
     {
-      "id": 126,
       "question": "Le particelle α hanno una massa circa:",
       "options": {
         "A": "1000 volte quella di una particella β",
@@ -1545,11 +1509,11 @@ const quizQuestions = {
         "C": "7000 volte quella di una particella β",
         "D": "10000 volte quella di una particella β"
       },
+      "id": 126,
       "answer": "C",
       "notes": "Le particelle α (nuclei di elio) hanno una massa circa 7000 volte maggiore di quella delle particelle β (elettroni)."
     },
     {
-      "id": 127,
       "question": "Gli elettroni Auger sono caratterizzati da:",
       "options": {
         "A": "Alta energia e lungo raggio",
@@ -1557,11 +1521,11 @@ const quizQuestions = {
         "C": "Alta energia e corto raggio",
         "D": "Bassa energia e lungo raggio"
       },
+      "id": 127,
       "answer": "B",
       "notes": "Gli elettroni Auger sono particelle a bassa energia e corto raggio, spesso emesse a cascata da atomi eccitati."
     },
     {
-      "id": 128,
       "question": "Il danno da azione diretta delle radiazioni rappresenta circa:",
       "options": {
         "A": "1/3 del danno totale per radiazioni a basso LET",
@@ -1569,11 +1533,11 @@ const quizQuestions = {
         "C": "1/2 del danno totale per radiazioni a basso LET",
         "D": "3/4 del danno totale per radiazioni a basso LET"
       },
+      "id": 128,
       "answer": "A",
       "notes": "Gli effetti diretti rappresentano circa 1/3 del danno per radiazioni a basso LET, mentre gli effetti indiretti rappresentano 2/3."
     },
     {
-      "id": 129,
       "question": "Il rapporto di potenziamento dell'ossigeno (OER) per radiazioni a basso LET è circa:",
       "options": {
         "A": "1",
@@ -1581,11 +1545,11 @@ const quizQuestions = {
         "C": "3",
         "D": "4"
       },
+      "id": 129,
       "answer": "C",
       "notes": "OER = D_ipossia/D_aria ≈ 3 per radiazioni a basso LET, mentre è ≈ 1 per radiazioni ad alto LET."
     },
     {
-      "id": 130,
       "question": "Le rotture del doppio filamento del DNA (DSBs) sono critiche perché:",
       "options": {
         "A": "Sono facilmente riparabili",
@@ -1593,11 +1557,11 @@ const quizQuestions = {
         "C": "Correlano con morte cellulare e carcinogenesi",
         "D": "Avvengono solo ad alte dosi"
       },
+      "id": 130,
       "answer": "C",
       "notes": "Le DSBs svolgono un ruolo critico nella morte cellulare, carcinogenesi ed effetti ereditari, essendo più difficili da riparare."
     },
     {
-      "id": 131,
       "question": "La riparazione NHEJ (Non-Homologous End Joining) opera principalmente durante:",
       "options": {
         "A": "Solo la fase S",
@@ -1605,23 +1569,23 @@ const quizQuestions = {
         "C": "Tutto il ciclo cellulare, specialmente G1/S",
         "D": "Solo durante la mitosi"
       },
+      "id": 131,
       "answer": "C",
       "notes": "NHEJ opera durante tutto il ciclo cellulare, specialmente in G1/S, riparando DSBs senza utilizzare omologia di sequenza."
     },
     {
-      "id": 132,
       "question": "Il LET (Linear Energy Transfer) è definito come:",
       "options": {
-        "A": "L'energia totale della particella",
+        "A": "dE/dl - potenza media impartita per unità di area",
         "B": "dE/dl - energia media impartita per unità di lunghezza",
-        "C": "La velocità della particella",
-        "D": "Il range della particella nel mezzo"
+        "C": "dE/dl - forza media impartita per unità di volume",
+        "D": "dE/dl - momento media impartita per unità di superficie"
       },
+      "id": 132,
       "answer": "B",
       "notes": "LET = dE/dl rappresenta la velocità lineare con cui l'energia viene depositata nel mezzo dalle particelle secondarie."
     },
     {
-      "id": 133,
       "question": "L'RBE (Relative Biological Effectiveness) massimo si verifica:",
       "options": {
         "A": "Ad alta dose",
@@ -1629,11 +1593,11 @@ const quizQuestions = {
         "C": "A dose intermedia",
         "D": "Non dipende dalla dose"
       },
+      "id": 133,
       "answer": "B",
       "notes": "RBE_max si verifica a dose zero e corrisponde al rapporto α_H/α_L delle costanti di radiosensibilità lineare."
     },
     {
-      "id": 134,
       "question": "Nel modello lineare-quadratico, la sopravvivenza cellulare è espressa da:",
       "options": {
         "A": "S = e^(-αd)",
@@ -1641,11 +1605,11 @@ const quizQuestions = {
         "C": "S = e^(-αd - βd²)",
         "D": "S = e^(-αd + βd²)"
       },
+      "id": 134,
       "answer": "C",
       "notes": "L'equazione base del modello LQ è S = e^(-αd - βd²), dove α e β sono i coefficienti di sensibilità lineare e quadratica."
     },
     {
-      "id": 135,
       "question": "La dose biologica efficace (BED) per trattamenti acuti è:",
       "options": {
         "A": "BED = d(1 + d/(α/β))",
@@ -1653,23 +1617,23 @@ const quizQuestions = {
         "C": "BED = d + d²/(α/β)",
         "D": "BED = d - d²/(α/β)"
       },
+      "id": 135,
       "answer": "A",
       "notes": "Per trattamenti acuti, BED = d(1 + d/(α/β)), dove d è la dose per frazione e α/β è il rapporto caratteristico del tessuto."
     },
     {
-      "id": 136,
       "question": "Il rapporto α/β è tipicamente:",
       "options": {
-        "A": "Più alto per tessuti normali che per tumori",
+        "A": "Più alto per tumori (5-15 Gy) che per tessuti normali (2-5 Gy)",
         "B": "Più alto per tumori (5-20 Gy) che per tessuti normali (2-5 Gy)",
-        "C": "Uguale per tumori e tessuti normali",
-        "D": "Irrilevante per la radioterapia"
+        "C": "Più alto per tumori (5-30 Gy) che per tessuti normali (2-5 Gy)",
+        "D": "Più alto per tumori (5-40 Gy) che per tessuti normali (2-5 Gy)"
       },
+      "id": 136,
       "answer": "B",
       "notes": "Il rapporto α/β è sistematicamente più elevato per i tumori (5-20 Gy) rispetto ai tessuti normali a risposta tardiva (2-5 Gy)."
     },
     {
-      "id": 137,
       "question": "Gli effetti stocastici delle radiazioni sono caratterizzati da:",
       "options": {
         "A": "Soglia di dose definita",
@@ -1677,11 +1641,11 @@ const quizQuestions = {
         "C": "Probabilità proporzionale alla dose",
         "D": "Manifestazione immediata"
       },
+      "id": 137,
       "answer": "C",
       "notes": "Gli effetti stocastici (tumori, danni ereditari) hanno probabilità correlata alla dose ma gravità indipendente dalla dose ricevuta."
     },
     {
-      "id": 138,
       "question": "Nella radioterapia mirata, l'indice terapeutico dipende da:",
       "options": {
         "A": "Solo la dose totale erogata",
@@ -1689,11 +1653,11 @@ const quizQuestions = {
         "C": "Rapporto tra danno al tumore e ai tessuti sani",
         "D": "Solo la durata del trattamento"
       },
+      "id": 138,
       "answer": "C",
       "notes": "L'indice terapeutico è una misura del danno al tumore rispetto al danno alle strutture sane critiche."
     },
     {
-      "id": 139,
       "question": "I tessuti normali critici in radioterapia con radionuclidi includono principalmente:",
       "options": {
         "A": "Solo il midollo osseo",
@@ -1701,11 +1665,11 @@ const quizQuestions = {
         "C": "Solo i reni",
         "D": "Solo il fegato"
       },
+      "id": 139,
       "answer": "B",
       "notes": "I principali organi critici sono midollo osseo, reni, fegato, tratto intestinale e polmoni, ciascuno con diversa radiosensibilità e tempo di manifestazione del danno."
     },
     {
-      "id": 140,
       "question": "Per ottimizzare l'indice terapeutico, il range delle particelle deve essere scelto considerando:",
       "options": {
         "A": "Solo il costo del radionuclide",
@@ -1713,11 +1677,11 @@ const quizQuestions = {
         "C": "Solo l'emivita",
         "D": "Solo la disponibilità"
       },
+      "id": 140,
       "answer": "B",
       "notes": "Per leucemie/micrometastasi sono preferibili particelle a corto raggio (α), mentre per tumori solidi sono utili emettitori β a medio-lungo raggio per l'effetto cross-fire."
     },
     {
-      "id": 141,
       "question": "In una gamma camera, cosa garantisce l'allineamento corretto dei rivelatori in un sistema SPECT?",
       "options": {
         "A": "Acquisizione simultanea di tutte le proiezioni",
@@ -1725,11 +1689,11 @@ const quizQuestions = {
         "C": "Utilizzo di algoritmi di ricostruzione 3D",
         "D": "Correzione degli eventi casuali"
       },
+      "id": 141,
       "answer": "B",
       "notes": "Per identificare il corretto allineamento in SPECT si determina sperimentalmente il centro di rotazione posizionando una piccola sorgente puntiforme nel campo visivo in un punto decentrato. Le deviazioni dal pattern previsto vengono misurate nei sinogrammi."
     },
     {
-      "id": 142,
       "question": "Nel metodo TEW (Triple Energy Window) per la correzione dello scattering in SPECT, le finestre energetiche ausiliarie servono per:",
       "options": {
         "A": "Aumentare la risoluzione energetica",
@@ -1737,11 +1701,11 @@ const quizQuestions = {
         "C": "Migliorare la sensibilità del rivelatore",
         "D": "Calibrare l'energia dei fotoni"
       },
+      "id": 142,
       "answer": "B",
       "notes": "Il metodo TEW utilizza due finestre energetiche di scattering (una sopra e una sotto la finestra di picco dei fotoni) per stimare la componente di dispersione nella finestra del fotopicco utilizzando l'equazione TEW specifica."
     },
     {
-      "id": 143,
       "question": "Nel meccanismo di annichilazione di positroni, la conservazione della quantità di moto garantisce che:",
       "options": {
         "A": "I due fotoni abbiano energia diversa",
@@ -1749,11 +1713,11 @@ const quizQuestions = {
         "C": "Un solo fotone venga emesso",
         "D": "L'energia dei fotoni sia superiore a 511 keV"
       },
+      "id": 143,
       "answer": "B",
       "notes": "La conservazione della quantità di moto, che è prossima a zero immediatamente prima dell'annichilazione, garantisce che entrambi i fotoni siano emessi quasi esattamente a 180° l'uno dall'altro, base fondamentale della PET."
     },
     {
-      "id": 144,
       "question": "Quale scintillatore è diventato preferito per i sistemi PET 3D grazie al suo breve tempo di decadimento?",
       "options": {
         "A": "NaI(Tl)",
@@ -1761,11 +1725,11 @@ const quizQuestions = {
         "C": "LSO",
         "D": "CsI(Tl)"
       },
+      "id": 144,
       "answer": "C",
       "notes": "L'LSO è diventato lo scintillatore preferito per progetti di scanner che operano senza setti interpiatto (3D), grazie al suo breve tempo di decadimento che permette di ridurre la finestra temporale di coincidenza e gli eventi casuali."
     },
     {
-      "id": 145,
       "question": "Il NECR (Noise Equivalent Count Rate) in PET è dato dalla formula:",
       "options": {
         "A": "T²/(T+S+R)",
@@ -1773,11 +1737,11 @@ const quizQuestions = {
         "C": "(T+S)²/R",
         "D": "T/(S+R)"
       },
+      "id": 145,
       "answer": "B",
       "notes": "Il NECR si calcola con la formula T²/(T+S+2fR) dove T, S e R sono rispettivamente i tassi di conteggio delle coincidenze vere, diffuse e casuali, e f è la frazione della larghezza del sinogramma che interseca il fantoccio."
     },
     {
-      "id": 146,
       "question": "In modalità 3D PET, la rimozione dei setti interplanari comporta:",
       "options": {
         "A": "Diminuzione della sensibilità e degli eventi diffusi",
@@ -1785,11 +1749,11 @@ const quizQuestions = {
         "C": "Migliore risoluzione spaziale",
         "D": "Riduzione del tempo morto"
       },
+      "id": 146,
       "answer": "B",
       "notes": "La modalità 3D è associata a un'elevata sensibilità, ma anche a un aumento delle frazioni di diffusione (scatter) e di coincidenze casuali (random) rispetto alla modalità 2D."
     },
     {
-      "id": 147,
       "question": "Nel tempo di volo (TOF) PET, la differenza di tempo tra i segnali registrati dai rivelatori A e B viene utilizzata per:",
       "options": {
         "A": "Calibrare l'energia dei fotoni",
@@ -1797,11 +1761,11 @@ const quizQuestions = {
         "C": "Correggere l'attenuazione",
         "D": "Ridurre il rumore statistico"
       },
+      "id": 147,
       "answer": "B",
       "notes": "Con la PET a tempo di volo (TOF), la differenza di tempo tra i segnali registrati dai rivelatori viene utilizzata per stimare la posizione dell'evento di annichilazione lungo la linea di risposta, aggiungendo informazioni spaziali."
     },
     {
-      "id": 148,
       "question": "Il fattore di attenuazione (AF) per una particolare LOR in PET dipende:",
       "options": {
         "A": "Dalla posizione della sorgente lungo la LOR",
@@ -1809,11 +1773,11 @@ const quizQuestions = {
         "C": "Dall'energia del fotone primario",
         "D": "Dal tipo di rivelatore utilizzato"
       },
+      "id": 148,
       "answer": "B",
       "notes": "Il fattore di attenuazione per una particolare LOR dipende solo dal materiale lungo la LOR ed è identico all'attenuazione subita da una sorgente esterna di fotoni da 511 keV lungo la stessa linea, indipendentemente dalla posizione della sorgente."
     },
     {
-      "id": 149,
       "question": "Nella PET, per convertire le immagini da unità arbitrarie a concentrazione di attività assoluta è necessario:",
       "options": {
         "A": "Correzione dell'attenuazione",
@@ -1821,11 +1785,11 @@ const quizQuestions = {
         "C": "Un fattore di calibrazione determinato sperimentalmente",
         "D": "Correzione dello scatter"
       },
+      "id": 149,
       "answer": "C",
       "notes": "Per convertire le immagini PET in unità di concentrazione di attività assoluta (Bq/mL) è necessario un fattore di calibrazione determinato sperimentalmente, solitamente usando un fantoccio cilindrico uniforme."
     },
     {
-      "id": 150,
       "question": "L'accoppiamento della TC con i sistemi SPECT e PET offre principalmente:",
       "options": {
         "A": "Migliore risoluzione spaziale",
@@ -1833,11 +1797,11 @@ const quizQuestions = {
         "C": "Beneficio per la correzione dell'attenuazione e informazioni anatomiche",
         "D": "Aumento della sensibilità"
       },
+      "id": 150,
       "answer": "C",
       "notes": "L'accoppiamento della TC offre un beneficio tecnico aggiuntivo per la correzione dell'attenuazione e fornisce informazioni anatomiche spazialmente registrate, particolarmente vantaggioso per la localizzazione e caratterizzazione della malattia."
     },
     {
-      "id": 151,
       "question": "Secondo la IAEA, l'obiettivo principale della Division of Human Health è:",
       "options": {
         "A": "Produzione di radiofarmaci",
@@ -1845,11 +1809,11 @@ const quizQuestions = {
         "C": "Prevenzione, diagnosi e trattamento medico",
         "D": "Controllo delle armi nucleari"
       },
+      "id": 151,
       "answer": "C",
       "notes": "La Division of Human Health della IAEA si occupa di applicazioni della fisica nucleare in medicina per prevenzione, diagnosi e trattamento, includendo nutrizione, medicina nucleare, radioterapia e dosimetria/fisica medica."
     },
     {
-      "id": 152,
       "question": "In radiologia diagnostica, il bianco in una radiografia indica:",
       "options": {
         "A": "Tessuti meno densi",
@@ -1857,11 +1821,11 @@ const quizQuestions = {
         "C": "Presenza di aria",
         "D": "Tessuti normali"
       },
+      "id": 152,
       "answer": "B",
       "notes": "In una radiografia il bianco indica che più fotoni sono stati fermati (tessuto denso ne fa passare meno), mentre il nero indica che ne sono stati fermati meno (tessuto meno denso ne fa passare di più)."
     },
     {
-      "id": 153,
       "question": "L'adroterapia utilizza principalmente:",
       "options": {
         "A": "Solo raggi X ad alta energia",
@@ -1869,11 +1833,11 @@ const quizQuestions = {
         "C": "Elettroni accelerati",
         "D": "Raggi gamma"
       },
+      "id": 153,
       "answer": "B",
       "notes": "L'adroterapia utilizza protoni o ioni carbonio. In Italia ci sono due centri principali: Trento (solo protoni) e Pavia (anche ioni carbonio). Permette di trattare tumori altrimenti non trattabili ma richiede acceleratori molto grandi, costosi e complessi."
     },
     {
-      "id": 154,
       "question": "La brachiterapia garantisce principalmente:",
       "options": {
         "A": "Minore costo del trattamento",
@@ -1881,11 +1845,11 @@ const quizQuestions = {
         "C": "Migliore imaging durante il trattamento",
         "D": "Riduzione del tempo di trattamento"
       },
+      "id": 154,
       "answer": "B",
       "notes": "La brachiterapia utilizza piccole sorgenti radioattive convogliate nel paziente irradiando dall'interno, garantendo maggiore confinamento radioattivo e consentendo di introdurre nel corpo maggiori radiazioni rispetto alle tecniche esterne."
     },
     {
-      "id": 155,
       "question": "I laboratori secondari di dosimetria sono coordinati dalla:",
       "options": {
         "A": "WHO",
@@ -1893,11 +1857,11 @@ const quizQuestions = {
         "C": "IAEA",
         "D": "ICRU"
       },
+      "id": 155,
       "answer": "C",
       "notes": "I laboratori secondari (89 in 77 nazioni diverse) rispetto ai 23 primari sono coordinati dalla IAEA per garantire la calibrazione degli strumenti rispetto allo standard globale e assicurare la tracciabilità della misura."
     },
     {
-      "id": 156,
       "question": "L'auditing dosimetrico della IAEA verifica:",
       "options": {
         "A": "Solo la qualità delle immagini",
@@ -1905,11 +1869,11 @@ const quizQuestions = {
         "C": "La formazione del personale",
         "D": "La sicurezza delle strutture"
       },
+      "id": 156,
       "answer": "B",
       "notes": "L'auditing dosimetrico consiste in verifiche indipendenti dell'accuratezza nella misurazione, erogazione e calibrazione della dose attraverso dosimetri irradiati di dosi prestabilite. Se la dose non rientra nei valori di tolleranza (5%) si ricerca la causa dell'errore."
     },
     {
-      "id": 157,
       "question": "Il programma di cooperazione tecnica della IAEA supporta:",
       "options": {
         "A": "Solo la ricerca accademica",
@@ -1917,11 +1881,11 @@ const quizQuestions = {
         "C": "Esclusivamente l'acquisto di strumentazione",
         "D": "Solo la medicina privata"
       },
+      "id": 157,
       "answer": "B",
       "notes": "Il programma di cooperazione tecnica supporta progetti svolti in comune dagli stati membri in maniera diretta, importante per formazione e aggiornamento professionale del personale, associato al supporto diretto attraverso invio di esperti e acquisto di strumenti necessari."
     },
     {
-      "id": 158,
       "question": "Il principale vantaggio dell'intelligenza artificiale in medicina nucleare secondo la IAEA è:",
       "options": {
         "A": "Riduzione dei costi",
@@ -1929,11 +1893,11 @@ const quizQuestions = {
         "C": "Sostituzione completa del personale medico",
         "D": "Eliminazione degli errori diagnostici"
       },
+      "id": 158,
       "answer": "B",
       "notes": "L'interesse verso l'IA è cresciuto grazie alla diminuzione del costo della memoria digitale e l'aumento della potenza dei calcolatori, permettendo accesso a dati del paziente a tutto tondo. La IAEA si occupa della formazione per preparare il personale medico."
     },
     {
-      "id": 159,
       "question": "La combinazione di informazioni PET e SPECT offre:",
       "options": {
         "A": "Solo informazioni anatomiche",
@@ -1941,23 +1905,23 @@ const quizQuestions = {
         "C": "Informazioni morfologiche e funzionali combinate",
         "D": "Riduzione della dose al paziente"
       },
+      "id": 159,
       "answer": "C",
       "notes": "La SPECT da informazioni morfologiche mentre la PET da informazioni funzionali più precise. Combinando le informazioni PET e SPECT si uniscono informazioni morfologiche e funzionali per una valutazione completa."
     },
     {
-      "id": 160,
       "question": "In radioterapia, il tubo a raggi X deve avere distanza più lunga rispetto alla diagnostica per:",
       "options": {
-        "A": "Ridurre la dose al paziente",
+        "A": "Dare energia elevata ai fotoni (6-11.25 MeV)",
         "B": "Dare energia elevata ai fotoni (6-15 MeV)",
-        "C": "Migliorare la qualità dell'immagine",
-        "D": "Ridurre lo scattering"
+        "C": "Dare energia elevata ai fotoni (6-22.5 MeV)",
+        "D": "Dare energia elevata ai fotoni (6-30 MeV)"
       },
+      "id": 160,
       "answer": "B",
       "notes": "In radioterapia il tubo a raggi X deve avere distanza più lunga per dare energia elevata ai fotoni (6-15 MeV energia massima), mentre la guida d'onda per accelerare gli elettroni può essere più lunga di un metro."
     },
     {
-      "id": 161,
       "question": "Che cos'è il tempo di volo (TOF) nella PET?",
       "options": {
         "A": "Il tempo di decadimento del radionuclide",
@@ -1965,11 +1929,11 @@ const quizQuestions = {
         "C": "Il tempo necessario per acquisire un'immagine completa",
         "D": "Il tempo di circolazione del radiofarmaco"
       },
+      "id": 161,
       "answer": "B",
       "notes": "Il TOF (Time-of-Flight) usa la differenza nei tempi di arrivo dei fotoni per localizzare con precisione il sito delle annichilazioni positrone-elettrone."
     },
     {
-      "id": 162,
       "question": "Qual è il prerequisito principale per i sistemi PET TOF?",
       "options": {
         "A": "Bassa risoluzione spaziale",
@@ -1977,11 +1941,11 @@ const quizQuestions = {
         "C": "Bassa energia dei fotoni",
         "D": "Alta attività del radiofarmaco"
       },
+      "id": 162,
       "answer": "B",
       "notes": "Un'alta risoluzione temporale è necessaria per misurare accuratamente le piccole differenze nei tempi di arrivo dei fotoni."
     },
     {
-      "id": 163,
       "question": "La differenza media di tempo tra due rivelatori nella PET TOF è data da:",
       "options": {
         "A": "2Δx/c",
@@ -1989,11 +1953,11 @@ const quizQuestions = {
         "C": "x/c",
         "D": "c/Δx"
       },
+      "id": 163,
       "answer": "A",
       "notes": "La formula è (x+Δx)/c - (x-Δx)/c = 2Δx/c, dove c è la velocità della luce."
     },
     {
-      "id": 164,
       "question": "Il TOF ha potenziali benefici maggiori per:",
       "options": {
         "A": "Pazienti pediatrici",
@@ -2001,11 +1965,11 @@ const quizQuestions = {
         "C": "Pazienti di grandi dimensioni",
         "D": "Studi cardiaci"
       },
+      "id": 164,
       "answer": "C",
       "notes": "Il TOF è particolarmente vantaggioso nei pazienti di grandi dimensioni dove l'attenuazione e lo scatter sono elevati."
     },
     {
-      "id": 165,
       "question": "Che cos'è la normalizzazione nella PET?",
       "options": {
         "A": "La correzione per il decadimento radioattivo",
@@ -2013,11 +1977,11 @@ const quizQuestions = {
         "C": "La calibrazione dell'energia dei fotoni",
         "D": "La rimozione del rumore di fondo"
       },
+      "id": 165,
       "answer": "B",
       "notes": "La normalizzazione compensa le variazioni di sensibilità tra diverse linee di risposta (LOR), simile alla correzione di uniformità nella gamma camera."
     },
     {
-      "id": 166,
       "question": "I file di normalizzazione sono:",
       "options": {
         "A": "Fattori di correzione additivi",
@@ -2025,11 +1989,11 @@ const quizQuestions = {
         "C": "Costanti fisiche universali",
         "D": "Valori teorici calcolati"
       },
+      "id": 166,
       "answer": "B",
       "notes": "I file di normalizzazione sono fattori di correzione determinati sperimentalmente, applicati come termini moltiplicativi per ciascuna LOR."
     },
     {
-      "id": 167,
       "question": "La correzione degli eventi casuali (randoms) è:",
       "options": {
         "A": "Opzionale per studi qualitativi",
@@ -2037,11 +2001,11 @@ const quizQuestions = {
         "C": "Necessaria solo per alte attività",
         "D": "Automatica in tutti i sistemi"
       },
+      "id": 167,
       "answer": "B",
       "notes": "La correzione degli eventi casuali è essenziale per tutti gli studi quantitativi ed è implementata di routine in quasi tutti i sistemi scanner."
     },
     {
-      "id": 168,
       "question": "Il metodo di correzione dei randoms con circuito ritardato:",
       "options": {
         "A": "Identifica e rimuove singoli eventi casuali",
@@ -2049,11 +2013,11 @@ const quizQuestions = {
         "C": "Elimina completamente gli eventi casuali",
         "D": "Aumenta la sensibilità del sistema"
       },
+      "id": 168,
       "answer": "B",
       "notes": "Il canale ritardato non identifica singoli eventi casuali ma stima il numero medio di eventi casuali che ci si aspetta."
     },
     {
-      "id": 169,
       "question": "Nella correzione per attenuazione PET, la probabilità di un evento di coincidenza:",
       "options": {
         "A": "Dipende dalla posizione della sorgente lungo la LOR",
@@ -2061,11 +2025,11 @@ const quizQuestions = {
         "C": "Varia linearmente con la distanza",
         "D": "È sempre costante"
       },
+      "id": 169,
       "answer": "B",
       "notes": "A differenza della SPECT, nella PET la probabilità di coincidenza non dipende dalla posizione della sorgente lungo una particolare LOR."
     },
     {
-      "id": 170,
       "question": "Il fattore di attenuazione (AF) per una LOR è dato da:",
       "options": {
         "A": "AF = e^(-μD)",
@@ -2073,11 +2037,11 @@ const quizQuestions = {
         "C": "AF = μ(x)",
         "D": "AF = 1/μ(x)"
       },
+      "id": 170,
       "answer": "B",
       "notes": "Il fattore di attenuazione è AF = e^(-∫μ(x)dx) dove l'integrale è calcolato lungo la LOR."
     },
     {
-      "id": 171,
       "question": "I sistemi di trasmissione per correzione di attenuazione possono usare:",
       "options": {
         "A": "Solo sorgenti di ⁶⁸Ge",
@@ -2085,23 +2049,23 @@ const quizQuestions = {
         "C": "Sorgenti rotanti (⁶⁸Ge, ¹³⁷Cs) o sistemi TC",
         "D": "Solo sorgenti di ¹³⁷Cs"
       },
+      "id": 171,
       "answer": "C",
       "notes": "Sono stati sviluppati diversi sistemi: sorgenti rotanti a barra di ⁶⁸Ge, sorgenti puntiformi di ¹³⁷Cs, e sistemi basati su TC."
     },
     {
-      "id": 172,
       "question": "Per la correzione di attenuazione in PET, le immagini TC devono essere:",
       "options": {
-        "A": "Usate direttamente senza modifiche",
+        "A": "Riscalate da unità Hounsfield a coefficienti di attenuazione per 383.25 keV",
         "B": "Riscalate da unità Hounsfield a coefficienti di attenuazione per 511 keV",
-        "C": "Convertite in unità di densità",
-        "D": "Filtrate per ridurre il rumore"
+        "C": "Riscalate da unità Hounsfield a coefficienti di attenuazione per 766.5 keV",
+        "D": "Riscalate da unità Hounsfield a coefficienti di attenuazione per 1022 keV"
       },
+      "id": 172,
       "answer": "B",
       "notes": "Le immagini TC devono essere riscalate da unità Hounsfield (HU) a coefficienti di attenuazione lineare appropriati per 511 keV."
     },
     {
-      "id": 173,
       "question": "Lo scatter è un problema maggiore in:",
       "options": {
         "A": "Acquisizioni 2-D",
@@ -2109,11 +2073,11 @@ const quizQuestions = {
         "C": "Studi statici",
         "D": "Studi dinamici"
       },
+      "id": 173,
       "answer": "B",
       "notes": "Il contributo dello scatter è maggiore nelle acquisizioni 3-D rispetto a quelle 2-D, dove la collimazione fisica limita i fotoni dispersi."
     },
     {
-      "id": 174,
       "question": "La correzione del tempo morto compensa:",
       "options": {
         "A": "Il decadimento del radionuclide",
@@ -2121,11 +2085,11 @@ const quizQuestions = {
         "C": "L'attenuazione dei fotoni",
         "D": "Lo scatter dei fotoni"
       },
+      "id": 174,
       "answer": "B",
       "notes": "La correzione del tempo morto compensa la perdita di sensibilità che si verifica quando un secondo fotone arriva mentre il precedente è ancora in elaborazione."
     },
     {
-      "id": 175,
       "question": "Dopo la ricostruzione, le immagini PET hanno inizialmente unità di:",
       "options": {
         "A": "Becquerel per millilitro",
@@ -2133,11 +2097,11 @@ const quizQuestions = {
         "C": "Curie per grammo",
         "D": "Dose assorbita"
       },
+      "id": 175,
       "answer": "B",
       "notes": "Dopo la ricostruzione, le immagini PET hanno unità arbitrarie, tipicamente conteggi per voxel per secondo."
     },
     {
-      "id": 176,
       "question": "Il fattore di calibrazione CF per convertire in concentrazione di attività assoluta è:",
       "options": {
         "A": "CF = A/V × C/p",
@@ -2145,11 +2109,11 @@ const quizQuestions = {
         "C": "CF = C × p/(A/V)",
         "D": "CF = (A/V) + C + p"
       },
+      "id": 176,
       "answer": "B",
       "notes": "Il fattore di calibrazione è CF = (A/V) × (p/C), dove A/V è la concentrazione nota, C il dato medio per voxel, e p la frazione di positroni."
     },
     {
-      "id": 177,
       "question": "La frazione di positroni per il ¹⁸F è:",
       "options": {
         "A": "0,90",
@@ -2157,11 +2121,11 @@ const quizQuestions = {
         "C": "0,97",
         "D": "1,00"
       },
+      "id": 177,
       "answer": "C",
       "notes": "Il ¹⁸F, comunemente usato negli esperimenti di calibrazione, ha una frazione di positroni di 0,97."
     },
     {
-      "id": 178,
       "question": "I sistemi combinati SPECT/TC e PET/TC offrono il vantaggio di:",
       "options": {
         "A": "Maggiore risoluzione spaziale",
@@ -2169,11 +2133,11 @@ const quizQuestions = {
         "C": "Minore dose al paziente",
         "D": "Tempi di acquisizione più brevi"
       },
+      "id": 178,
       "answer": "B",
       "notes": "Il vantaggio principale è che le immagini delle due modalità sono intrinsecamente registrate senza bisogno di ulteriori manipolazioni."
     },
     {
-      "id": 179,
       "question": "L'accoppiamento della TC con SPECT e PET offre un beneficio tecnico aggiuntivo per:",
       "options": {
         "A": "La ricostruzione dell'immagine",
@@ -2181,11 +2145,11 @@ const quizQuestions = {
         "C": "Il controllo di qualità",
         "D": "La calibrazione dei detector"
       },
+      "id": 179,
       "answer": "B",
       "notes": "La disponibilità di TC co-registrate è particolarmente vantaggiosa per la correzione per attenuazione."
     },
     {
-      "id": 180,
       "question": "Nella SPECT, i principali vantaggi della correzione per attenuazione basata su TC sono:",
       "options": {
         "A": "Velocità e precisione",
@@ -2193,11 +2157,11 @@ const quizQuestions = {
         "C": "Minore dose al paziente",
         "D": "Semplicità operativa"
       },
+      "id": 180,
       "answer": "B",
       "notes": "I principali vantaggi sono una maggiore accuratezza e affidabilità rispetto alle sorgenti di radionuclidi tradizionali."
     },
     {
-      "id": 181,
       "question": "Nella PET, il vantaggio principale della TC è:",
       "options": {
         "A": "Migliore qualità dell'immagine",
@@ -2205,11 +2169,11 @@ const quizQuestions = {
         "C": "Maggiore sensibilità",
         "D": "Minore costo"
       },
+      "id": 181,
       "answer": "B",
       "notes": "Il vantaggio principale è una riduzione efficace della durata complessiva della procedura di scansione grazie alla rapidità delle immagini TC."
     },
     {
-      "id": 182,
       "question": "L'adozione di strumenti SPECT/TC è stata più lenta rispetto a PET/TC probabilmente a causa di:",
       "options": {
         "A": "Problemi tecnici",
@@ -2217,11 +2181,11 @@ const quizQuestions = {
         "C": "Mancanza di applicazioni cliniche",
         "D": "Problemi di sicurezza"
       },
+      "id": 182,
       "answer": "B",
       "notes": "L'adozione di strumenti combinati SPECT/TC è stata più lenta rispetto a quella di PET/TC, probabilmente a causa di considerazioni sui costi."
     },
     {
-      "id": 183,
       "question": "Secondo la lezione IAEA, l'agenzia nasce per:",
       "options": {
         "A": "Controllare le armi nucleari",
@@ -2229,11 +2193,11 @@ const quizQuestions = {
         "C": "Regolamentare l'uso medico delle radiazioni",
         "D": "Sviluppare nuove tecnologie nucleari"
       },
+      "id": 183,
       "answer": "B",
       "notes": "La IAEA nasce per diffondere con il contributo dell'energia nucleare pace, salute e prosperità nel mondo."
     },
     {
-      "id": 184,
       "question": "La IAEA non è propriamente un'agenzia delle nazioni unite, ma:",
       "options": {
         "A": "Un'organizzazione privata",
@@ -2241,11 +2205,11 @@ const quizQuestions = {
         "C": "Un'agenzia governativa",
         "D": "Un centro di ricerca indipendente"
       },
+      "id": 184,
       "answer": "B",
       "notes": "La IAEA è un'organizzazione internazionale che riporta direttamente al consiglio della sicurezza e all'assemblea generale delle nazioni unite."
     },
     {
-      "id": 185,
       "question": "La Division of Human Health della IAEA si occupa di:",
       "options": {
         "A": "Solo radioterapia",
@@ -2253,11 +2217,11 @@ const quizQuestions = {
         "C": "Prevenzione, diagnosi e trattamento",
         "D": "Solo ricerca"
       },
+      "id": 185,
       "answer": "C",
       "notes": "La Division of Human Health si occupa di prevenzione, diagnosi e trattamento usando applicazioni della fisica nucleare."
     },
     {
-      "id": 186,
       "question": "La sezione di Dosimetria e Fisica Medica della IAEA supporta quanti stati membri?",
       "options": {
         "A": "150",
@@ -2265,11 +2229,11 @@ const quizQuestions = {
         "C": "180",
         "D": "200"
       },
+      "id": 186,
       "answer": "C",
       "notes": "La sezione supporta 180 stati membri nell'implementazione dell'utilizzo delle radiazioni ionizzanti in maniera sicura ed efficace."
     },
     {
-      "id": 187,
       "question": "In radiologia diagnostica, il bianco in una radiografia indica che:",
       "options": {
         "A": "Meno fotoni sono stati fermati",
@@ -2277,35 +2241,35 @@ const quizQuestions = {
         "C": "I fotoni hanno attraversato senza interazione",
         "D": "C'è un errore nell'acquisizione"
       },
+      "id": 187,
       "answer": "B",
       "notes": "Il bianco indica che più fotoni sono stati fermati, mentre il nero indica che ne sono stati fermati meno."
     },
     {
-      "id": 188,
       "question": "Il range energetico tipico per la radiologia diagnostica è:",
       "options": {
-        "A": "10-50 keV",
+        "A": "30-75 keV",
         "B": "30-100 keV",
-        "C": "100-200 keV",
-        "D": "200-500 keV"
+        "C": "30-150 keV",
+        "D": "30-200 keV"
       },
+      "id": 188,
       "answer": "B",
       "notes": "Il range energetico per la radiologia diagnostica è tipicamente 30-100 keV."
     },
     {
-      "id": 189,
       "question": "In radioterapia, l'energia massima dei fotoni può arrivare a:",
       "options": {
-        "A": "1-3 MeV",
+        "A": "6-11.25 MeV",
         "B": "6-15 MeV",
-        "C": "20-25 MeV",
-        "D": "50-100 MeV"
+        "C": "6-22.5 MeV",
+        "D": "6-30 MeV"
       },
+      "id": 189,
       "answer": "B",
       "notes": "In radioterapia, l'energia massima può arrivare a 6-15 MeV per irraggiare efficacemente le masse tumorali."
     },
     {
-      "id": 190,
       "question": "L'adroterapia utilizza:",
       "options": {
         "A": "Solo protoni",
@@ -2313,11 +2277,11 @@ const quizQuestions = {
         "C": "Protoni o ioni carbonio",
         "D": "Solo elettroni"
       },
+      "id": 190,
       "answer": "C",
       "notes": "L'adroterapia utilizza protoni o ioni carbonio. In Italia ci sono centri a Trento (solo protoni) e Pavia (anche ioni carbonio)."
     },
     {
-      "id": 191,
       "question": "La brachiterapia utilizza:",
       "options": {
         "A": "Fascio di elettroni esterni",
@@ -2325,11 +2289,11 @@ const quizQuestions = {
         "C": "Campi magnetici",
         "D": "Ultrasuoni"
       },
+      "id": 191,
       "answer": "B",
       "notes": "La brachiterapia usa piccole sorgenti radioattive che vengono convogliate nel paziente irradiando dall'interno."
     },
     {
-      "id": 192,
       "question": "Il Sistema Internazionale per le radiazioni ionizzanti è coordinato da quanti laboratori primari?",
       "options": {
         "A": "16",
@@ -2337,11 +2301,11 @@ const quizQuestions = {
         "C": "89",
         "D": "77"
       },
+      "id": 192,
       "answer": "B",
       "notes": "Ci sono 23 laboratori primari nel mondo che possono misurare e definire direttamente lo standard della misura delle radiazioni."
     },
     {
-      "id": 193,
       "question": "I laboratori secondari di calibrazione sono:",
       "options": {
         "A": "23 in 16 nazioni",
@@ -2349,23 +2313,23 @@ const quizQuestions = {
         "C": "77 in 89 nazioni",
         "D": "16 in 23 nazioni"
       },
+      "id": 193,
       "answer": "B",
       "notes": "Sono stati istituiti 89 laboratori secondari in 77 nazioni diverse per calibrare gli strumenti rispetto allo standard dei laboratori primari."
     },
     {
-      "id": 194,
       "question": "L'auditing dosimetrico della IAEA verifica l'accuratezza con una tolleranza del:",
       "options": {
-        "A": "3%",
+        "A": "3.75%",
         "B": "5%",
-        "C": "10%",
-        "D": "15%"
+        "C": "7.5%",
+        "D": "10%"
       },
+      "id": 194,
       "answer": "B",
       "notes": "Se la dose non rientra nei valori di tolleranza del 5%, si ricerca la causa dell'errore e se necessario si interviene con esperti."
     },
     {
-      "id": 195,
       "question": "Il Programma di Cooperazione Tecnica della IAEA include:",
       "options": {
         "A": "Solo formazione teorica",
@@ -2373,11 +2337,11 @@ const quizQuestions = {
         "C": "Solo supporto finanziario",
         "D": "Solo consulenza a distanza"
       },
+      "id": 195,
       "answer": "B",
       "notes": "Il programma include l'invio di esperti nelle strutture e l'acquisto di strumenti necessari per gli ospedali."
     },
     {
-      "id": 196,
       "question": "Negli ultimi anni, l'interesse verso l'intelligenza artificiale in medicina è cresciuto grazie a:",
       "options": {
         "A": "Nuove scoperte scientifiche",
@@ -2385,11 +2349,11 @@ const quizQuestions = {
         "C": "Maggiore disponibilità di personale specializzato",
         "D": "Cambiamenti normativi"
       },
+      "id": 196,
       "answer": "B",
       "notes": "L'interesse è cresciuto grazie alla diminuzione del costo e dello spazio della memoria digitale e alla potenza dei calcolatori in costante aumento."
     },
     {
-      "id": 197,
       "question": "Secondo la IAEA, l'intelligenza artificiale in campo medico:",
       "options": {
         "A": "È già ampiamente implementata",
@@ -2397,11 +2361,11 @@ const quizQuestions = {
         "C": "È completamente sviluppata",
         "D": "È utilizzata solo in ricerca"
       },
+      "id": 197,
       "answer": "B",
       "notes": "Nonostante il crescente interesse, l'IA non è ancora presente né opportunamente teoricamente supportata in campo medico."
     },
     {
-      "id": 198,
       "question": "La IAEA si sta occupando di preparare il personale medico per l'IA attraverso:",
       "options": {
         "A": "Corsi universitari",
@@ -2409,11 +2373,11 @@ const quizQuestions = {
         "C": "Ricerca indipendente",
         "D": "Collaborazioni private"
       },
+      "id": 198,
       "answer": "B",
       "notes": "La IAEA si sta occupando della formazione e della consapevolezza ospedaliera per preparare il personale medico all'inserimento dell'IA."
     },
     {
-      "id": 199,
       "question": "L'accesso a 'dati del paziente a tutto tondo' è reso possibile da:",
       "options": {
         "A": "Nuove normative sulla privacy",
@@ -2421,11 +2385,11 @@ const quizQuestions = {
         "C": "Maggiore collaborazione tra ospedali",
         "D": "Nuovi protocolli medici"
       },
+      "id": 199,
       "answer": "B",
       "notes": "L'accesso completo ai dati del paziente è reso possibile dall'aumento della potenza di calcolo e dalla diminuzione dei costi di memoria digitale."
     },
     {
-      "id": 200,
       "question": "In radioterapia, il tubo a raggi X deve avere:",
       "options": {
         "A": "Distanza più breve per alta energia",
@@ -2433,6 +2397,7 @@ const quizQuestions = {
         "C": "Stessa distanza della diagnostica",
         "D": "Distanza variabile in base al paziente"
       },
+      "id": 200,
       "answer": "B",
       "notes": "In radioterapia il tubo a raggi X deve avere distanza più lunga per dare energia elevata ai fotoni (6-15 MeV), con la guida d'onda che può essere più lunga di un metro."
     }
